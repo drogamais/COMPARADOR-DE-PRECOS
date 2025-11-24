@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "338e74e4360e0ac881c6",
+  "position": {
+    "x": 23.080561617641195,
+    "y": 204.34289510624822,
+    "z": 9000,
+    "height": 47.443267776096825,
+    "width": 62.934947049924361,
+    "tabOrder": 45000
+  },
+  "visual": {
+    "visualType": "image",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "moda352588880060579.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "ff80e287826c09287abc",
+  "howCreated": "InsertVisualButton"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "COMPARADOR DE PREÇOS"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "eb42eab0-a0a0-4f14-8a05-62698283d6ad"
+  }
+}

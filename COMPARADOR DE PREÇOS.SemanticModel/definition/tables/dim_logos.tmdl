@@ -1,0 +1,41 @@
+table dim_logos
+	lineageTag: 597337d0-fa41-4af7-9067-308de6cf7542
+
+	column id_bandeira
+		dataType: int64
+		formatString: 0
+		lineageTag: af9b84fa-9d03-4771-9222-0820cde3fdcc
+		summarizeBy: sum
+		sourceColumn: id_bandeira
+
+		annotation SummarizationSetBy = Automatic
+
+	column bandeira
+		dataType: string
+		lineageTag: dfc49a40-2e87-4794-92a9-b69aa1434ece
+		summarizeBy: none
+		sourceColumn: bandeira
+
+		annotation SummarizationSetBy = Automatic
+
+	column logo_bandeira
+		dataType: string
+		lineageTag: 34b8e272-d54b-4888-901b-dbcb57f4aeb1
+		summarizeBy: none
+		sourceColumn: logo_bandeira
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_logos = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("ddJdb4IwFAbgv2K4HlZEme6uKrgqH7UVs8x4UZApTikB8evXrxCDLql35+I8fZO3Z7lUNOVNGRFvDB2IqJiV1dtSaYvBsk0HuWMxbY/HNP8AIG7GQdAMObB75+DcvgBrHx3iZNNMk03FdLHsQDK0IHGgDAZWOv2au+DAsvCHZQdW005JkYsamJhDT2YH392zrhtAJMZpFqm8tt3SegS9jN0OJoYxmAOHZ/H/WEOsu4hSE8ncJZ+1pp834KI8j+IavYtdDMe+2XBM16MyubsejVtCQMo2RaQeooTnNe9V3F2Ytkzq2yBtDQyAWXKK9jXql6ispoE97NuQyKxDZut1OgY4i0KuYp4We5bVT2gtYQhE0orIzvqlwRSMMr5hKmHxoyOtPBEKvcbEg9Kf2Q77i/VVA5RxdcLZ42O09l1i6NtSGob9jI70imJW7J+sXln/RU3tLtU6+UnA4rkmrbwj30Uvr2gy08+37gIU1RGF97zVHw==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [id_bandeira = _t, bandeira = _t, logo_bandeira = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"id_bandeira", Int64.Type}, {"bandeira", type text}, {"logo_bandeira", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

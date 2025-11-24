@@ -1,0 +1,28 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Atualização","dim_logos","bronze_menorPreco_produtos","silver_menorPreco_notas"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_2dac58e5-7698-485d-8113-b51b458c9216
+ref table Medidas
+ref table Atualização
+ref table dCalendario
+ref table LocalDateTable_8dbea108-b7a3-469d-95e0-d307a5c65791
+ref table dim_logos
+ref table bronze_menorPreco_produtos
+ref table LocalDateTable_89e642b2-0d1e-4f88-bd03-8c98c97e4b64
+ref table silver_menorPreco_notas
+ref table LocalDateTable_a867240f-3b04-4e86-b00c-9db76755d7e7
+ref table LocalDateTable_19ac7ba3-0c5b-4049-986a-6ab1c60cb286
+
+ref cultureInfo pt-BR
+

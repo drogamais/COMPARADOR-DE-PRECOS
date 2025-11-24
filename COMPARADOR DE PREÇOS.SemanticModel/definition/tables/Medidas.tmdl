@@ -1,0 +1,854 @@
+table Medidas
+	lineageTag: 681ecb76-1407-48a4-bd56-82e0fe91324d
+
+	measure 'Top 3 - (Menor Preço)' = ```
+			
+			    VAR BANDEIRA = [Top 3 - Bandeira]
+			    VAR N_cid = COUNT(silver_menorPreco_notas[cidade])
+			    
+			    VAR VlrMR = CALCULATE(
+			                      MIN(silver_menorPreco_notas[valor]),
+			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                    )
+			    VAR VlrCid = CALCULATE(
+			                      MIN(silver_menorPreco_notas[valor]),
+			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-")
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Top Preço
+		lineageTag: ce0fc33e-61c7-4a63-91a8-f644f194f0e5
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Top 1 - (Menor Preço)' = ```
+			
+			    VAR BANDEIRA = [Top 1 - Bandeira]
+			    VAR N_cid = COUNT(silver_menorPreco_notas[cidade])
+			    
+			    VAR VlrMR = CALCULATE(
+			                        MIN(silver_menorPreco_notas[valor]),
+			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                    )
+			    VAR VlrCid = CALCULATE(
+			                        MIN(silver_menorPreco_notas[valor]),
+			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-") 
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Top Preço
+		lineageTag: c63c8c8b-c570-4120-acb3-5d82a0373956
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Top 4 - (Menor Preço)' = ```
+			
+			    VAR BANDEIRA = [Top 4 - Bandeira]
+			    VAR N_cid = COUNT(silver_menorPreco_notas[cidade])
+			    
+			    VAR VlrMR = CALCULATE(
+			                      MIN(silver_menorPreco_notas[valor]),
+			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                    )
+			    VAR VlrCid = CALCULATE(
+			                      MIN(silver_menorPreco_notas[valor]),
+			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-")
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Top Preço
+		lineageTag: da586273-7da2-451c-aedd-2bb95a196848
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Top 5 - (Menor Preço)' = ```
+			
+			    VAR BANDEIRA = [Top 5 - Bandeira]
+			    VAR N_cid = COUNT(silver_MenorPreco_notas[cidade])
+			    
+			    VAR VlrMR = CALCULATE(
+			                      MIN(silver_MenorPreco_notas[valor]),
+			                        FILTER(silver_MenorPreco_notas, silver_MenorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_MenorPreco_notas, silver_MenorPreco_notas[PRODUTO])
+			                    )
+			    VAR VlrCid = CALCULATE(
+			                      MIN(silver_MenorPreco_notas[valor]),
+			                        FILTER(silver_MenorPreco_notas, silver_MenorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_MenorPreco_notas, silver_MenorPreco_notas[PRODUTO])
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-")
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Top Preço
+		lineageTag: f1763947-5337-4461-acbc-45d0716fc0b3
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Top 6 - (Menor Preço)' = ```
+			
+			    VAR BANDEIRA = [Top 6 - Bandeira]
+			    VAR N_cid = COUNT(silver_menorPreco_notas[cidade])
+			    
+			    VAR VlrMR = CALCULATE(
+			                      MIN(silver_menorPreco_notas[valor]),
+			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                    )
+			    VAR VlrCid = CALCULATE(
+			                      MIN(silver_menorPreco_notas[valor]),
+			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-")
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Top Preço
+		lineageTag: 2044de95-a556-4313-b524-ef527ec00484
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Top 2 - (Menor Preço)' = ```
+			
+			    VAR BANDEIRA = [Top 2 - Bandeira]
+			    VAR N_cid = COUNT(silver_menorPreco_notas[cidade])
+			    
+			    VAR VlrMR = CALCULATE(
+			                      MIN(silver_menorPreco_notas[valor]),
+			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                    )
+			    VAR VlrCid = CALCULATE(
+			                      MIN(silver_menorPreco_notas[valor]),
+			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-")
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Top Preço
+		lineageTag: 969c8a24-9a7f-46a2-8c3e-080ed1e2cf15
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Drogamais (Menor Preço)' = COALESCE(CALCULATE(MIN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira] = "DROGAMAIS"),"-")
+		displayFolder: Top Preço
+		lineageTag: 2ea7d78b-047d-4a20-bc90-e4891c55a2bc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Top 1 (Última Compra)' = ```
+			
+			
+			VAR nBANDEIRA = [Top 1 - Bandeira]
+			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			
+			RETURN
+			    COALESCE(
+			        CALCULATE(
+			            MAX(silver_menorPreco_notas[date]), 
+			            FILTER(
+			                silver_menorPreco_notas, 
+			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			        ), 
+			        "-"
+			    )
+			```
+		formatString: General date
+		displayFolder: Última Compra
+		lineageTag: 7d96e3d3-970d-4470-a8d2-03e5b882ccf1
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Top 2 (Última Compra)' = ```
+			
+			
+			VAR nBANDEIRA = [Top 2 - Bandeira]
+			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			
+			RETURN
+			    COALESCE(
+			        CALCULATE(
+			            MAX(silver_menorPreco_notas[date]), 
+			            FILTER(
+			                silver_menorPreco_notas, 
+			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			        ), 
+			        "-"
+			    )
+			```
+		formatString: General Date
+		displayFolder: Última Compra
+		lineageTag: ac2e8990-1206-4153-bdbc-83e69a13d284
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Top 3 (Última Compra)' = ```
+			
+			
+			VAR nBANDEIRA = [Top 3 - Bandeira]
+			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			
+			RETURN
+			    COALESCE(
+			        CALCULATE(
+			            MAX(silver_menorPreco_notas[date]), 
+			            FILTER(
+			                silver_menorPreco_notas, 
+			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			        ), 
+			        "-"
+			    )
+			```
+		formatString: General Date
+		displayFolder: Última Compra
+		lineageTag: e0746651-5977-4fbe-b905-79335778361f
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Top 4 (Última Compra)' = ```
+			
+			
+			VAR nBANDEIRA = [Top 4 - Bandeira]
+			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			
+			RETURN
+			    COALESCE(
+			        CALCULATE(
+			            MAX(silver_menorPreco_notas[date]), 
+			            FILTER(
+			                silver_menorPreco_notas, 
+			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			        ), 
+			        "-"
+			    )
+			```
+		formatString: General Date
+		displayFolder: Última Compra
+		lineageTag: c7131d95-e616-4c94-8ac6-48b96023ce68
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Top 5 (Última Compra)' = ```
+			
+			
+			VAR nBANDEIRA = [Top 5 - Bandeira]
+			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			
+			RETURN
+			    COALESCE(
+			        CALCULATE(
+			            MAX(silver_menorPreco_notas[date]), 
+			            FILTER(
+			                silver_menorPreco_notas, 
+			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			        ), 
+			        "-"
+			    )
+			```
+		formatString: General Date
+		displayFolder: Última Compra
+		lineageTag: c13be306-586c-4264-9557-2d485df725fa
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Top 6 (Última Compra)' = ```
+			
+			
+			VAR nBANDEIRA = [Top 6 - Bandeira]
+			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			
+			RETURN
+			    COALESCE(
+			        CALCULATE(
+			            MAX(silver_menorPreco_notas[date]), 
+			            FILTER(
+			                silver_menorPreco_notas, 
+			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			        ), 
+			        "-"
+			    )
+			```
+		formatString: General Date
+		displayFolder: Última Compra
+		lineageTag: b48059ce-9a25-4598-9297-95f7ae739f19
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Drogamais (Última Compra)' = ```
+			COALESCE(CALCULATE(MAX(silver_menorPreco_notas[date]),dim_logos[bandeira] = "DROGAMAIS"),"-") 
+			```
+		formatString: General Date
+		displayFolder: Última Compra
+		lineageTag: 1bc33c58-9c5e-4868-add0-684437e147a7
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Média de desconto' = COALESCE(AVERAGE(silver_menorPreco_notas[valor_desconto]),0)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: de62d4a5-d09c-4eb2-a8ad-0e18fe9c29f0
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Qtd. Cidades' = DISTINCTCOUNT(silver_menorPreco_notas[geohash])
+		formatString: 0
+		displayFolder: Quantidades
+		lineageTag: 0d3e46eb-2923-4b6b-ab32-55d6e98bcffc
+
+	measure 'Qtd. Bandeiras' = DISTINCTCOUNT(silver_menorPreco_notas[bandeira])
+		formatString: 0
+		displayFolder: Quantidades
+		lineageTag: 70471531-f3ef-4fb8-b287-e6dc00ed1fa5
+
+	measure 'Qtd. Razão Social' = DISTINCTCOUNT(silver_menorPreco_notas[razao_social])
+		formatString: 0
+		displayFolder: Quantidades
+		lineageTag: e5569aeb-cd23-4fa7-82ed-53357b75c9c8
+
+	measure 'Top 1 - Bandeira' = ```
+			
+			
+			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			
+			    VAR BanMR = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_microrregiao] = 1,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                        )
+			                    )
+			    VAR BanCid = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_cidade] = 1,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[geohash] = Geohash
+			                        )
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
+			```
+		displayFolder: Bandeiras
+		lineageTag: 214deae1-665b-44bc-b3c6-61b196f11245
+
+	measure 'Top 2 - Bandeira' = ```
+			
+			
+			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			
+			    VAR BanMR = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_microrregiao] = 2,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                        )
+			                    )
+			    VAR BanCid = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_cidade] = 2,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[geohash] = Geohash
+			                        )
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
+			```
+		displayFolder: Bandeiras
+		lineageTag: 65c3519d-9515-4878-9228-2a85ab35fe68
+
+	measure 'Top 3 - Bandeira' = ```
+			
+			
+			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			
+			    VAR BanMR = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_microrregiao] = 3,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                        )
+			                    )
+			    VAR BanCid = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_cidade] = 3,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[geohash] = Geohash
+			                        )
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
+			```
+		displayFolder: Bandeiras
+		lineageTag: 5d9faa06-d716-4d47-86b0-b55743812a99
+
+	measure 'Top 4 - Bandeira' = ```
+			
+			
+			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			
+			    VAR BanMR = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_microrregiao] = 4,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                        )
+			                    )
+			    VAR BanCid = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_cidade] = 4,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[geohash] = Geohash
+			                        )
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
+			```
+		displayFolder: Bandeiras
+		lineageTag: 1492c869-b17b-4237-aa5f-81e4d480a32e
+
+	measure 'Top 5 - Bandeira' = ```
+			
+			
+			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			
+			    VAR BanMR = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_microrregiao] = 5,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                        )
+			                    )
+			    VAR BanCid = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_cidade] = 5,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[geohash] = Geohash
+			                        )
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
+			```
+		displayFolder: Bandeiras
+		lineageTag: f598c7f5-f444-4a65-befa-0a241c9b1fc5
+
+	measure 'Top 6 - Bandeira' = ```
+			
+			
+			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			
+			    VAR BanMR = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_microrregiao] = 6,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                        )
+			                    )
+			    VAR BanCid = CALCULATE(
+			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
+			                        silver_menorPreco_notas[rank_cidade] = 6,
+			                        FILTER(
+			                            silver_menorPreco_notas,
+			                            silver_menorPreco_notas[geohash] = Geohash
+			                        )
+			                    )
+			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
+			```
+		displayFolder: Bandeiras
+		lineageTag: deaace2a-b734-4a26-b6ad-8dd49f50143b
+
+	measure Drogamais = ```
+			"DROGAMAIS"
+			
+			```
+		displayFolder: Bandeiras
+		lineageTag: bcc0c271-a6ee-4b94-88ea-a0cd99a8ecf5
+
+	measure 'Outras Bandeiras' = "OUTRAS BANDEIRAS"
+		displayFolder: Bandeiras
+		lineageTag: 2fed4849-4ae4-400a-92dc-09a28fc646d1
+
+	measure 'Texto - Razão Social' = COALESCE(IF(DISTINCTCOUNT(silver_menorPreco_notas[razao_social]) > 1, "NÃO SELECIONADA", SELECTEDVALUE(silver_menorPreco_notas[razao_social])),"NÃO SELECIONADA")
+		displayFolder: Razão Social
+		lineageTag: e24b2b68-ec76-4b81-82ca-cc72dbc43592
+
+	measure 'Menor Valor - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", CALCULATE(MIN(silver_menorPreco_notas[valor])))
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Razão Social
+		lineageTag: 850b1a86-0933-403d-a923-f2c58e83555b
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Qtd Notas - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", COUNT(silver_menorPreco_notas[descricao]))
+		formatString: 0
+		displayFolder: Razão Social
+		lineageTag: 195c36ee-c082-4cd0-b934-702944cc4c9e
+
+	measure 'Média Desconto - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", AVERAGE(silver_menorPreco_notas[valor_desconto]))
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Razão Social
+		lineageTag: 6de01c53-326f-4256-8dcc-937f6e36efb4
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Média Valor - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", AVERAGE(silver_menorPreco_notas[valor]))
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Razão Social
+		lineageTag: 1833947b-4bae-414b-a0eb-0b8261aa0fae
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'PMC - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", SELECTEDVALUE(fat_Dados[valor_tabela]))
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Razão Social
+		lineageTag: b4682046-d7f2-4bcb-b0d7-87e60bf2bf85
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Últ. Nota - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", FORMAT(MAX(fat_Dados[datahora]), "dd/mm/yyyy hh:mm"))
+		formatString: General Date
+		displayFolder: Razão Social
+		lineageTag: 1b215a04-edca-4c84-a275-79682cd6cf8d
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Qtd Notas' = ```
+			
+			    COUNTROWS(silver_menorPreco_notas)
+			```
+		formatString: 0
+		displayFolder: Quantidades
+		lineageTag: ecf985aa-9453-43f3-bf2c-2bd15abaddf5
+
+	measure 'Outras Bandeiras - Menor Preço' = COALESCE(CALCULATE(MIN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira] = "OUTRAS BANDEIRAS"),"-")
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Top Preço
+		lineageTag: ad8bbe04-d6d0-4b82-8e07-0fa6bea42a9b
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Top 1 - Imagem' = ```
+			
+			    VAR Bandeira =  [Top 1 - Bandeira]
+			    
+			    RETURN COALESCE(CALCULATE(
+			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
+			                        dim_logos[bandeira] = Bandeira,
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[bandeira], silver_menorPreco_notas[microrregiao], silver_menorPreco_notas[cidade])),
+			                    "-")
+			```
+		displayFolder: Imagens
+		lineageTag: 5d39378e-796a-402a-882c-1be2b014a0af
+
+	measure 'Top 2 - Imagem' = ```
+			
+			    VAR Bandeira =  [Top 2 - Bandeira]
+			    
+			    RETURN COALESCE(CALCULATE(
+			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
+			                        dim_logos[bandeira] = Bandeira,
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[bandeira], silver_menorPreco_notas[Microrregiao], silver_menorPreco_notas[cidade])),
+			                    "-")
+			```
+		displayFolder: Imagens
+		lineageTag: 933bbb25-ee53-40c9-b940-02ceaed812a1
+
+	measure 'Top 3 - Imagem' = ```
+			
+			                COALESCE(CALCULATE(
+			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
+			                        FILTER(dim_logos, dim_logos[bandeira] = [Top 3 - Bandeira]),
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[Microrregiao], silver_menorPreco_notas[cidade])),
+			                    "-")
+			```
+		displayFolder: Imagens
+		lineageTag: ade456b8-30eb-4f2f-b2c2-f187b3737e31
+
+	measure 'Top 4 - Imagem' = ```
+			
+			    VAR Bandeira =  [Top 4 - Bandeira]
+			    
+			    RETURN COALESCE(CALCULATE(
+			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
+			                        dim_logos[bandeira] = Bandeira,
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[bandeira], silver_menorPreco_notas[Microrregiao], silver_menorPreco_notas[cidade])),
+			                    "-")
+			```
+		displayFolder: Imagens
+		lineageTag: e3e772ea-f827-4609-b263-908192205cd4
+
+	measure 'Top 5 - Imagem' = ```
+			
+			    VAR Bandeira =  [Top 5 - Bandeira]
+			    
+			    RETURN COALESCE(CALCULATE(
+			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
+			                        dim_logos[bandeira] = Bandeira,
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[bandeira], silver_menorPreco_notas[Microrregiao], silver_menorPreco_notas[cidade])),
+			                    "-")
+			```
+		displayFolder: Imagens
+		lineageTag: 210d370c-849c-4fdd-973a-2de17b171638
+
+	measure 'Top 6 - Imagem' = ```
+			
+			    VAR Bandeira =  [Top 6 - Bandeira]
+			    
+			    RETURN COALESCE(CALCULATE(
+			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
+			                        dim_logos[bandeira] = Bandeira,
+			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[bandeira], silver_menorPreco_notas[Microrregiao], silver_menorPreco_notas[cidade])),
+			                    "-")
+			```
+		displayFolder: Imagens
+		lineageTag: 11608620-e0da-4268-ac90-db31858920ee
+
+	measure Moda = ```
+			
+			
+			VAR Tabela = 
+			    SUMMARIZE(silver_menorPreco_notas, silver_menorPreco_notas[valor],
+			    "QTD", COUNT(silver_menorPreco_notas[descricao])
+			    )
+			VAR Maximo = MAXX(Tabela, [QTD])
+			RETURN COALESCE(MAXX(FILTER(Tabela, [QTD] = Maximo), silver_menorPreco_notas[valor]),AVERAGE(silver_menorPreco_notas[valor]))
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: 502cb3bf-4424-40c9-9bea-444ef447279f
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Mediana = COALESCE(MEDIAN(silver_menorPreco_notas[valor]),AVERAGE(silver_menorPreco_notas[valor]))
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: fd86a17f-cbe5-40da-b8b8-ce93c1f8e538
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Menor Valor' = COALESCE(MIN(silver_menorPreco_notas[valor]),AVERAGE(silver_menorPreco_notas[valor]))
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: 2c6ec65c-96ac-40af-b342-93a11cc4fae6
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Outras Bandeiras (Última Compra)' = ```
+			
+			
+			COALESCE(
+			        CALCULATE(
+			            MAX(silver_menorPreco_notas[date]), 
+			            FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = "OUTRAS BANDEIRAS")
+			        ), 
+			        "-"
+			    )
+			```
+		formatString: General Date
+		displayFolder: Última Compra
+		lineageTag: b47370e9-a62e-43ce-886e-d07ef1bb4303
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Mediana TXT' = COALESCE(MEDIAN(silver_menorPreco_notas[valor]),"-")
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: 45e552a3-11d3-453e-a016-8448862972cd
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Menor Valor TXT' = COALESCE(MIN(silver_menorPreco_notas[valor]),"-")
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: 4bbe0ec9-f78d-4eb6-8a04-ca8b0e62e4f7
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Moda TXT' = ```
+			
+			
+			VAR Tabela = 
+			    SUMMARIZE(silver_menorPreco_notas, silver_menorPreco_notas[valor],
+			    "QTD", COUNT(silver_menorPreco_notas[descricao])
+			    )
+			VAR Maximo = MAXX(Tabela, [QTD])
+			RETURN COALESCE(MAXX(FILTER(Tabela, [QTD] = Maximo), silver_menorPreco_notas[valor]),"-")
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: c3a139e4-e87b-4e69-a2f4-f09d7678d320
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Microrregião_Priorizada =
+			
+			VAR TabelaContagem =
+			    ADDCOLUMNS (
+			        VALUES ( silver_menorPreco_notas[microrregiao] ),
+			        "@Contagem", CALCULATE ( COUNTROWS ( silver_menorPreco_notas ) )
+			    )
+			VAR TabelaTop1 =
+			    TOPN (
+			        1,
+			        TabelaContagem,
+			        [@Contagem], DESC,                // 1ª Regra: Prioriza pela MAIOR contagem (DESC)
+			        silver_menorPreco_notas[microrregiao], ASC // 2ª Regra: Desempata por ordem alfabética (ASC)
+			    )
+			VAR Resultado =
+			    MAXX ( TabelaTop1, silver_menorPreco_notas[microrregiao] ) // Extrai o valor de texto da tabela de 1 linha
+			
+			RETURN
+			    Resultado
+		displayFolder: Geral
+		lineageTag: d942848e-9fbc-4770-8359-e23978882b11
+
+	measure 'Eixo Max.' =
+			
+			
+			VAR Valor = MAX(silver_menorPreco_notas[valor])
+			
+			RETURN Valor + Valor*0.10
+		displayFolder: Geral
+		lineageTag: ed33a668-5ee4-4f90-95ac-6a537fafd2ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Eixo Min.' =
+			
+			
+			VAR Valor = MIN(silver_menorPreco_notas[valor])
+			
+			RETURN Valor - Valor*0.10
+		displayFolder: Geral
+		lineageTag: fef57a6d-67b0-4fd2-b3a0-ed8c92735b90
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Mediana TXT S/OB' = COALESCE(CALCULATE(MEDIAN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira]<>"Outras Bandeiras"),"-")
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: 3629d8bd-75dc-4ab6-8f55-d5ee4a884e79
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Menor Valor TXT S/OB' = COALESCE(CALCULATE(MIN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira]<>"Outras Bandeiras"),"-")
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: 113caed7-19cf-4d4b-a39b-1d6d8214cc06
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Moda TXT S/OB' = ```
+			
+			
+			VAR Tabela = 
+			    SUMMARIZE(silver_menorPreco_notas, silver_menorPreco_notas[valor],
+			    "QTD", COUNT(silver_menorPreco_notas[descricao])
+			    )
+			VAR Maximo = MAXX(Tabela, [QTD])
+			RETURN COALESCE(CALCULATE(MAXX(FILTER(Tabela, [QTD] = Maximo), silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira]<>"Outras Bandeiras"),"-")
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: f642bda1-f25c-4030-b534-9fe8e3fee8b5
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Mediana S/OB' = COALESCE(CALCULATE(MEDIAN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira]<>"Outras Bandeiras"),AVERAGE(silver_menorPreco_notas[valor]))
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: a364fcf7-7ea6-4b80-876d-e73572ffd163
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Menor Valor S/OB' = COALESCE(CALCULATE(MIN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira]<>"Outras Bandeiras"),AVERAGE(silver_menorPreco_notas[valor]))
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: dbe06a78-f071-4098-9ef7-d777276d596d
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Moda S/OB' = ```
+			
+			
+			VAR Tabela = 
+			    SUMMARIZE(silver_menorPreco_notas, silver_menorPreco_notas[valor],
+			    "QTD", COUNT(silver_menorPreco_notas[descricao])
+			    )
+			VAR Maximo = MAXX(Tabela, [QTD])
+			RETURN COALESCE(CALCULATE(MAXX(FILTER(Tabela, [QTD] = Maximo), silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira] <> "Outras Bandeiras"),AVERAGE(silver_menorPreco_notas[valor]))
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Geral
+		lineageTag: 84a98b87-20c5-466f-8d56-8a33aea90061
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Menor Preço 1' = CALCULATE(MIN(silver_menorPreco_notas[valor]), FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = [Top 1 - Bandeira]), ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[microrregiao], silver_menorPreco_notas[cidade], silver_menorPreco_notas[PRODUTO]))
+		displayFolder: Geral
+		lineageTag: 880f7acf-8606-4fee-8205-3417c3d0030f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Período do Produto' = ```
+			"De "& DATEVALUE(SELECTEDVALUE(bronze_menorPreco_produtos[data_atualizacao])) &" á "& DATEVALUE(SELECTEDVALUE(bronze_menorPreco_produtos[data_atualizacao]))+30 
+			```
+		lineageTag: 6eac3d40-2c03-4f19-b6ae-b25d4aa6127f
+
+	measure DataHoraTexto = FORMAT(SELECTEDVALUE(silver_menorPreco_notas[date]), "dd/MM/yyyy HH:mm:ss")
+		displayFolder: Geral
+		lineageTag: 50e0ef95-0b04-4396-9a22-8c282b793c48
+
+	measure 'Data Limite' = TODAY()-15
+		formatString: Short Date
+		lineageTag: bb4d1b11-c940-43b0-8037-ef043ca1da81
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: a8645c25-14d8-4a4f-8fd8-48c76b085d6b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = e39562f48d3b401097d718afdea9e0a7
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

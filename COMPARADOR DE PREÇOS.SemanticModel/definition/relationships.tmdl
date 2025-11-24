@@ -1,0 +1,28 @@
+relationship a5e906d3-b7af-41dc-b635-bfcdceb1c921
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Atualização.'Última Atualização'
+	toColumn: LocalDateTable_8dbea108-b7a3-469d-95e0-d307a5c65791.Date
+
+relationship c2a8874d-259c-4ac1-ba20-1ecf0e501818
+	joinOnDateBehavior: datePartOnly
+	fromColumn: bronze_menorPreco_produtos.data_atualizacao
+	toColumn: LocalDateTable_89e642b2-0d1e-4f88-bd03-8c98c97e4b64.Date
+
+relationship a1a5611b-37ff-4065-94b1-4a81b4cf2154
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dCalendario.Date
+	toColumn: LocalDateTable_a867240f-3b04-4e86-b00c-9db76755d7e7.Date
+
+relationship 4f31ff57-4589-45e2-94db-d7c94bbf5e70
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dCalendario.'Início da semana'
+	toColumn: LocalDateTable_19ac7ba3-0c5b-4049-986a-6ab1c60cb286.Date
+
+relationship bff8dbf7-5f15-8e99-13d1-88dc1af47e27
+	fromColumn: silver_menorPreco_notas.gtin
+	toColumn: bronze_menorPreco_produtos.gtin
+
+relationship 47fd04b6-5ba7-13d2-8cb9-6d447d8bab32
+	fromColumn: silver_menorPreco_notas.DateRelacionamento
+	toColumn: dCalendario.Date
+

@@ -1,0 +1,330 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU10",
+      "reportVersionAtImport": {
+        "visual": "1.8.96",
+        "report": "2.0.96",
+        "page": "1.3.96"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ae660731d13435c0ccf3",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "silver_menorPreco_notas"
+              }
+            },
+            "Property": "considerado"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "s",
+              "Entity": "silver_menorPreco_notas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "s"
+                          }
+                        },
+                        "Property": "considerado"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'S'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "f266f01df58e401cd67f",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "silver_menorPreco_notas"
+              }
+            },
+            "Property": "bandeira"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "s",
+              "Entity": "silver_menorPreco_notas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "s"
+                              }
+                            },
+                            "Property": "bandeira"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'DROGAMAIS'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "filterSortOrder": "Custom"
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "ImageCarouselByMAQSoftware1448688110701"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY24SU10",
+          "path": "BaseThemes/CY24SU10.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "47704575095133063263.jpg",
+          "path": "47704575095133063263.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Logo_branca9903154236416072.png",
+          "path": "Logo_branca9903154236416072.png",
+          "type": "Image"
+        },
+        {
+          "name": "menorPreco5721110741914317.png",
+          "path": "menorPreco5721110741914317.png",
+          "type": "Image"
+        },
+        {
+          "name": "Menor5924483918830341.png",
+          "path": "Menor5924483918830341.png",
+          "type": "Image"
+        },
+        {
+          "name": "m_dia13901766105013635.png",
+          "path": "m_dia13901766105013635.png",
+          "type": "Image"
+        },
+        {
+          "name": "logo_drogamais4468331868930042.png",
+          "path": "logo_drogamais4468331868930042.png",
+          "type": "Image"
+        },
+        {
+          "name": "477008863242655592618.jpg",
+          "path": "477008863242655592618.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Drogamais9162744182169804.png",
+          "path": "Drogamais9162744182169804.png",
+          "type": "Image"
+        },
+        {
+          "name": "application21269710082915605.png",
+          "path": "application21269710082915605.png",
+          "type": "Image"
+        },
+        {
+          "name": "maps-and-flags40290467342886616.png",
+          "path": "maps-and-flags40290467342886616.png",
+          "type": "Image"
+        },
+        {
+          "name": "box7420645079714281.png",
+          "path": "box7420645079714281.png",
+          "type": "Image"
+        },
+        {
+          "name": "report9921131249280923.png",
+          "path": "report9921131249280923.png",
+          "type": "Image"
+        },
+        {
+          "name": "pharmacy40700241099306633.png",
+          "path": "pharmacy40700241099306633.png",
+          "type": "Image"
+        },
+        {
+          "name": "box-branco8961569682067536.png",
+          "path": "box-branco8961569682067536.png",
+          "type": "Image"
+        },
+        {
+          "name": "maps-and-flags-white3624779711770596.png",
+          "path": "maps-and-flags-white3624779711770596.png",
+          "type": "Image"
+        },
+        {
+          "name": "invoice-white7571709942177693.png",
+          "path": "invoice-white7571709942177693.png",
+          "type": "Image"
+        },
+        {
+          "name": "report-white6518606861340825.png",
+          "path": "report-white6518606861340825.png",
+          "type": "Image"
+        },
+        {
+          "name": "market39071062267327483.png",
+          "path": "market39071062267327483.png",
+          "type": "Image"
+        },
+        {
+          "name": "invoice06428633696740271.png",
+          "path": "invoice06428633696740271.png",
+          "type": "Image"
+        },
+        {
+          "name": "report-white6217421133134424.png",
+          "path": "report-white6217421133134424.png",
+          "type": "Image"
+        },
+        {
+          "name": "moda352588880060579.png",
+          "path": "moda352588880060579.png",
+          "type": "Image"
+        },
+        {
+          "name": "invoice-white5760853051532573.png",
+          "path": "invoice-white5760853051532573.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  }
+}

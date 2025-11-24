@@ -1,0 +1,101 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "ca0b02b3dcbc876ba565",
+  "displayName": "Analisar Bandeiras",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "pageBinding": {
+    "name": "3c23de3bd550ca8b4cf2",
+    "type": "Default",
+    "parameters": [],
+    "acceptsFilterContext": "None"
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'4770.jpg'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "47704575095133063263.jpg"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Fit'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "194L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "3bd920a26e9965b12b84",
+      "target": "f1cbaba0d1ac30c7aba6",
+      "type": "NoFilter"
+    },
+    {
+      "source": "577ef440a60a3bd1697e",
+      "target": "f1cbaba0d1ac30c7aba6",
+      "type": "NoFilter"
+    },
+    {
+      "source": "3bd920a26e9965b12b84",
+      "target": "577ef440a60a3bd1697e",
+      "type": "NoFilter"
+    },
+    {
+      "source": "138c8022b8e3a003e662",
+      "target": "f1cbaba0d1ac30c7aba6",
+      "type": "NoFilter"
+    },
+    {
+      "source": "577ef440a60a3bd1697e",
+      "target": "138c8022b8e3a003e662",
+      "type": "NoFilter"
+    },
+    {
+      "source": "3bd920a26e9965b12b84",
+      "target": "138c8022b8e3a003e662",
+      "type": "NoFilter"
+    }
+  ]
+}
