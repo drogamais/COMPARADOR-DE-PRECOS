@@ -22,7 +22,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "silver_menorPreco_notas"
+                          "Entity": "fat_notas"
                         }
                       },
                       "Property": "gtin"
@@ -47,7 +47,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "silver_menorPreco_notas"
+                        "Entity": "fat_notas"
                       }
                     },
                     "Property": "gtin"
@@ -179,28 +179,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "121b79c203727208c104",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "silver_menorPreco_notas"
-                  }
-                },
-                "Property": "gtin"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

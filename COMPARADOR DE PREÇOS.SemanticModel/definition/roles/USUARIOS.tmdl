@@ -1,0 +1,7 @@
+role USUARIOS
+	modelPermission: read
+
+	tablePermission view_menorPreco_lojas_email = USERPRINCIPALNAME() = view_menorPreco_lojas_email[email]
+
+	annotation PBI_Id = dd39a4aa7593477298ad79c8ae236556
+

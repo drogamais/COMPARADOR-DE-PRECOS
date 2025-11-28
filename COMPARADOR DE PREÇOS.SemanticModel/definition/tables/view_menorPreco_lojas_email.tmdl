@@ -1,0 +1,40 @@
+table view_menorPreco_lojas_email
+	lineageTag: 446b1e89-5cc6-4f32-b1d3-7b25eb8d25cb
+
+	column email
+		dataType: string
+		lineageTag: 1fee1b70-1732-4298-b601-b4dace280a38
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_loja
+		dataType: string
+		lineageTag: 31b2a9e4-3f70-4d5b-950c-42b91c43ac4f
+		summarizeBy: none
+		sourceColumn: id_loja
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_fantasia
+		dataType: string
+		lineageTag: 806ae5a4-3d24-49a7-a47f-9a25afe3fd21
+		summarizeBy: none
+		sourceColumn: nome_fantasia
+
+		annotation SummarizationSetBy = Automatic
+
+	partition view_menorPreco_lojas_email = m
+		mode: import
+		source =
+				let
+				    Fonte = MariaDB.Contents("10.48.12.20:3306;dbDrogamais", null, null),
+				    view_menorPreco_lojas_email_View = Fonte{[Name="view_menorPreco_lojas_email",Kind="View"]}[Data]
+				in
+				    view_menorPreco_lojas_email_View
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

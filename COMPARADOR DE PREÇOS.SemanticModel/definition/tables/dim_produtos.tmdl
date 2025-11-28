@@ -1,0 +1,93 @@
+table dim_produtos
+	lineageTag: 17b17e46-21f2-4b38-8f60-f9a17bbc262f
+
+	column id_produto
+		dataType: string
+		lineageTag: 6c27757a-f122-45db-8667-5cb9576c9dac
+		summarizeBy: none
+		sourceColumn: id_produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column gtin
+		dataType: string
+		lineageTag: 4ae4f527-4f54-4551-89fb-f53821c1f20b
+		summarizeBy: none
+		sourceColumn: gtin
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao
+		dataType: string
+		lineageTag: 7b16debb-2912-4c19-bfd0-562ccb53a13e
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column fabricante
+		dataType: string
+		lineageTag: 5cb2adea-6def-402c-b55d-f0566a1f2565
+		summarizeBy: none
+		sourceColumn: fabricante
+
+		annotation SummarizationSetBy = Automatic
+
+	column apresentacao
+		dataType: string
+		lineageTag: d3d4dd09-71fb-46f0-9a9b-67c643714ec8
+		summarizeBy: none
+		sourceColumn: apresentacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_atualizacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 183045f6-d0cc-4a46-93d2-f7ecb7bd3ed3
+		summarizeBy: none
+		sourceColumn: data_atualizacao
+
+		variation Variation
+			isDefault
+			relationship: ffa807c3-0f23-4f66-851c-b70fe8ea8cb7
+			defaultHierarchy: LocalDateTable_089ab086-3113-4901-b5b1-02f3ce53febf.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUTO = ```
+			
+			dim_produtos[gtin]
+			    & " - "
+			    & dim_produtos[descricao]
+			    & " - "
+			    & dim_produtos[fabricante]
+			
+			```
+		lineageTag: 864031bd-d965-4c0b-8296-47fa6efe0179
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: 7c89e4ad-9d24-41ef-86b7-0c2f7b2f2d48
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_produtos = m
+		mode: import
+		source =
+				let
+				    Fonte = MariaDB.Contents("10.48.12.20:3306;dbDrogamais", null, null),
+				    bronze_menorPreco_produtos_Table = Fonte{[Name="bronze_menorPreco_produtos",Kind="Table"]}[Data],
+				    #"Duplicatas Removidas" = Table.Distinct(bronze_menorPreco_produtos_Table, {"gtin"})
+				in
+				    #"Duplicatas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "1f629e10cc84a67cd027",
   "position": {
-    "x": 692.284417549168,
-    "y": 28.078668683812406,
+    "x": 691.9188767550703,
+    "y": 27.95631825273011,
     "z": 21000,
-    "height": 90.045385779122554,
-    "width": 274.00907715582451,
-    "tabOrder": 61000
+    "height": 87.862714508580353,
+    "width": 274.57098283931361,
+    "tabOrder": 57000
   },
   "visual": {
     "visualType": "image",
@@ -21,6 +21,39 @@
                   "PackageName": "RegisteredResources",
                   "PackageType": 1,
                   "ItemName": "Logo_branca9903154236416072.png"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "image": [
+        {
+          "properties": {
+            "sourceFile": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'logo altaneiro.png'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "logo_altaneiro8818128051078298.png"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Normal'"
+                    }
+                  }
                 }
               }
             }

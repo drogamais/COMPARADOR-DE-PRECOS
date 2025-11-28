@@ -224,23 +224,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5a323a1b31903287929e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Top 6 - Imagem"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

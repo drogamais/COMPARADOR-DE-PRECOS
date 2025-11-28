@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "silver_menorPreco_notas"
+                      "Entity": "fat_notas"
                     }
                   },
                   "Property": "cidade"
@@ -167,7 +167,7 @@
                 "From": [
                   {
                     "Name": "s",
-                    "Entity": "silver_menorPreco_notas",
+                    "Entity": "fat_notas",
                     "Type": 0
                   }
                 ],

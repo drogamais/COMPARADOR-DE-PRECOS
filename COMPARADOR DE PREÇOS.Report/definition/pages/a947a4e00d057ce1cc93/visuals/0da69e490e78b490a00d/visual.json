@@ -4,7 +4,7 @@
   "position": {
     "x": 399.90147783251234,
     "y": 117.04433497536947,
-    "z": 44000,
+    "z": 43000,
     "height": 68.275862068965523,
     "width": 272.21674876847288,
     "tabOrder": 42000
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "silver_menorPreco_notas"
+                      "Entity": "fat_notas"
                     }
                   },
                   "Property": "cidade"
                 }
               },
               "queryRef": "silver_menorPreco_produtos.cidade",
-              "nativeQueryRef": "cidade1",
-              "active": true
+              "nativeQueryRef": "CIDADE",
+              "active": true,
+              "displayName": "CIDADE"
             }
           ]
         }
@@ -42,13 +43,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
-                }
-              }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }

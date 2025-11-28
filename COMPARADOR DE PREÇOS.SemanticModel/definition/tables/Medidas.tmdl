@@ -4,17 +4,17 @@ table Medidas
 	measure 'Top 3 - (Menor Preço)' = ```
 			
 			    VAR BANDEIRA = [Top 3 - Bandeira]
-			    VAR N_cid = COUNT(silver_menorPreco_notas[cidade])
+			    VAR N_cid = COUNT(fat_notas[cidade])
 			    
 			    VAR VlrMR = CALCULATE(
-			                      MIN(silver_menorPreco_notas[valor]),
-			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                      MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    VAR VlrCid = CALCULATE(
-			                      MIN(silver_menorPreco_notas[valor]),
-			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                      MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-")
 			```
@@ -27,17 +27,17 @@ table Medidas
 	measure 'Top 1 - (Menor Preço)' = ```
 			
 			    VAR BANDEIRA = [Top 1 - Bandeira]
-			    VAR N_cid = COUNT(silver_menorPreco_notas[cidade])
+			    VAR N_cid = COUNT(fat_notas[cidade])
 			    
 			    VAR VlrMR = CALCULATE(
-			                        MIN(silver_menorPreco_notas[valor]),
-			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                        MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    VAR VlrCid = CALCULATE(
-			                        MIN(silver_menorPreco_notas[valor]),
-			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                        MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-") 
 			```
@@ -50,17 +50,17 @@ table Medidas
 	measure 'Top 4 - (Menor Preço)' = ```
 			
 			    VAR BANDEIRA = [Top 4 - Bandeira]
-			    VAR N_cid = COUNT(silver_menorPreco_notas[cidade])
+			    VAR N_cid = COUNT(fat_notas[cidade])
 			    
 			    VAR VlrMR = CALCULATE(
-			                      MIN(silver_menorPreco_notas[valor]),
-			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                      MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    VAR VlrCid = CALCULATE(
-			                      MIN(silver_menorPreco_notas[valor]),
-			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                      MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-")
 			```
@@ -73,17 +73,17 @@ table Medidas
 	measure 'Top 5 - (Menor Preço)' = ```
 			
 			    VAR BANDEIRA = [Top 5 - Bandeira]
-			    VAR N_cid = COUNT(silver_MenorPreco_notas[cidade])
+			    VAR N_cid = COUNT(fat_notas[cidade])
 			    
 			    VAR VlrMR = CALCULATE(
-			                      MIN(silver_MenorPreco_notas[valor]),
-			                        FILTER(silver_MenorPreco_notas, silver_MenorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_MenorPreco_notas, silver_MenorPreco_notas[PRODUTO])
+			                      MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    VAR VlrCid = CALCULATE(
-			                      MIN(silver_MenorPreco_notas[valor]),
-			                        FILTER(silver_MenorPreco_notas, silver_MenorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_MenorPreco_notas, silver_MenorPreco_notas[PRODUTO])
+			                      MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-")
 			```
@@ -96,17 +96,17 @@ table Medidas
 	measure 'Top 6 - (Menor Preço)' = ```
 			
 			    VAR BANDEIRA = [Top 6 - Bandeira]
-			    VAR N_cid = COUNT(silver_menorPreco_notas[cidade])
+			    VAR N_cid = COUNT(fat_notas[cidade])
 			    
 			    VAR VlrMR = CALCULATE(
-			                      MIN(silver_menorPreco_notas[valor]),
-			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                      MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    VAR VlrCid = CALCULATE(
-			                      MIN(silver_menorPreco_notas[valor]),
-			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                      MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-")
 			```
@@ -119,17 +119,17 @@ table Medidas
 	measure 'Top 2 - (Menor Preço)' = ```
 			
 			    VAR BANDEIRA = [Top 2 - Bandeira]
-			    VAR N_cid = COUNT(silver_menorPreco_notas[cidade])
+			    VAR N_cid = COUNT(fat_notas[cidade])
 			    
 			    VAR VlrMR = CALCULATE(
-			                      MIN(silver_menorPreco_notas[valor]),
-			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                      MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    VAR VlrCid = CALCULATE(
-			                      MIN(silver_menorPreco_notas[valor]),
-			                        FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = BANDEIRA),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[PRODUTO])
+			                      MIN(fat_notas[valor]),
+			                        FILTER(fat_notas, fat_notas[bandeira] = BANDEIRA),
+			                        ALLEXCEPT(fat_notas, fat_notas[PRODUTO])
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, VlrMR, VlrCid),"-")
 			```
@@ -139,7 +139,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Drogamais (Menor Preço)' = COALESCE(CALCULATE(MIN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira] = "DROGAMAIS"),"-")
+	measure 'Drogamais (Menor Preço)' = COALESCE(CALCULATE(MIN(fat_notas[valor]), fat_notas[bandeira] = "DROGAMAIS"),"-")
 		displayFolder: Top Preço
 		lineageTag: 2ea7d78b-047d-4a20-bc90-e4891c55a2bc
 
@@ -147,21 +147,17 @@ table Medidas
 
 	measure 'Top 1 (Última Compra)' = ```
 			
+			VAR nBANDEIRA = [Top 1 - Bandeira] 
+			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO]) 
+			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao]) 
 			
-			VAR nBANDEIRA = [Top 1 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
-			
-			RETURN
-			    COALESCE(
-			        CALCULATE(
-			            MAX(silver_menorPreco_notas[date]), 
-			            FILTER(
-			                silver_menorPreco_notas, 
-			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
-			        ), 
-			        "-"
-			    )
+			RETURN 
+			    COALESCE( 
+			            CALCULATE( 
+			                MAX(fat_notas[date]), 
+			                FILTER( fat_notas, fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA) 
+			                ), "-" 
+			            )
 			```
 		formatString: General date
 		displayFolder: Última Compra
@@ -173,16 +169,16 @@ table Medidas
 			
 			
 			VAR nBANDEIRA = [Top 2 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao])
 			
 			RETURN
 			    COALESCE(
 			        CALCULATE(
-			            MAX(silver_menorPreco_notas[date]), 
+			            MAX(fat_notas[date]), 
 			            FILTER(
-			                silver_menorPreco_notas, 
-			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			                fat_notas, 
+			                fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA)
 			        ), 
 			        "-"
 			    )
@@ -197,16 +193,16 @@ table Medidas
 			
 			
 			VAR nBANDEIRA = [Top 3 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao])
 			
 			RETURN
 			    COALESCE(
 			        CALCULATE(
-			            MAX(silver_menorPreco_notas[date]), 
+			            MAX(fat_notas[date]), 
 			            FILTER(
-			                silver_menorPreco_notas, 
-			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			                fat_notas, 
+			                fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA)
 			        ), 
 			        "-"
 			    )
@@ -221,16 +217,16 @@ table Medidas
 			
 			
 			VAR nBANDEIRA = [Top 4 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao])
 			
 			RETURN
 			    COALESCE(
 			        CALCULATE(
-			            MAX(silver_menorPreco_notas[date]), 
+			            MAX(fat_notas[date]), 
 			            FILTER(
-			                silver_menorPreco_notas, 
-			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			                fat_notas, 
+			                fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA)
 			        ), 
 			        "-"
 			    )
@@ -245,16 +241,16 @@ table Medidas
 			
 			
 			VAR nBANDEIRA = [Top 5 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao])
 			
 			RETURN
 			    COALESCE(
 			        CALCULATE(
-			            MAX(silver_menorPreco_notas[date]), 
+			            MAX(fat_notas[date]), 
 			            FILTER(
-			                silver_menorPreco_notas, 
-			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			                fat_notas, 
+			                fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA)
 			        ), 
 			        "-"
 			    )
@@ -269,16 +265,16 @@ table Medidas
 			
 			
 			VAR nBANDEIRA = [Top 6 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(silver_menorPreco_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(silver_menorPreco_notas[Microrregiao])
+			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO])
+			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao])
 			
 			RETURN
 			    COALESCE(
 			        CALCULATE(
-			            MAX(silver_menorPreco_notas[date]), 
+			            MAX(fat_notas[date]), 
 			            FILTER(
-			                silver_menorPreco_notas, 
-			                silver_menorPreco_notas[PRODUTO] = PRODUTO && silver_menorPreco_notas[Bandeira] = nBANDEIRA)
+			                fat_notas, 
+			                fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA)
 			        ), 
 			        "-"
 			    )
@@ -290,7 +286,7 @@ table Medidas
 		annotation PBI_FormatHint = {"isCustom":true}
 
 	measure 'Drogamais (Última Compra)' = ```
-			COALESCE(CALCULATE(MAX(silver_menorPreco_notas[date]),dim_logos[bandeira] = "DROGAMAIS"),"-") 
+			COALESCE(CALCULATE(MAX(fat_notas[date]),dim_logos[bandeira] = "DROGAMAIS"),"-") 
 			```
 		formatString: General Date
 		displayFolder: Última Compra
@@ -298,24 +294,17 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isCustom":true}
 
-	measure 'Média de desconto' = COALESCE(AVERAGE(silver_menorPreco_notas[valor_desconto]),0)
-		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
-		displayFolder: Geral
-		lineageTag: de62d4a5-d09c-4eb2-a8ad-0e18fe9c29f0
-
-		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
-
-	measure 'Qtd. Cidades' = DISTINCTCOUNT(silver_menorPreco_notas[geohash])
+	measure 'Qtd. Cidades' = DISTINCTCOUNT(fat_notas[geohash])
 		formatString: 0
 		displayFolder: Quantidades
 		lineageTag: 0d3e46eb-2923-4b6b-ab32-55d6e98bcffc
 
-	measure 'Qtd. Bandeiras' = DISTINCTCOUNT(silver_menorPreco_notas[bandeira])
+	measure 'Qtd. Bandeiras' = DISTINCTCOUNT(fat_notas[bandeira])
 		formatString: 0
 		displayFolder: Quantidades
 		lineageTag: 70471531-f3ef-4fb8-b287-e6dc00ed1fa5
 
-	measure 'Qtd. Razão Social' = DISTINCTCOUNT(silver_menorPreco_notas[razao_social])
+	measure 'Qtd. Razão Social' = DISTINCTCOUNT(fat_notas[id_loja])
 		formatString: 0
 		displayFolder: Quantidades
 		lineageTag: e5569aeb-cd23-4fa7-82ed-53357b75c9c8
@@ -323,24 +312,24 @@ table Medidas
 	measure 'Top 1 - Bandeira' = ```
 			
 			
-			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
-			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
-			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			    VAR N_cid = DISTINCTCOUNT(fat_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(fat_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(fat_notas[geohash])
 			
 			    VAR BanMR = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_microrregiao] = 1,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_microrregiao] = 1,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                            fat_notas,
+			                            fat_notas[Microrregiao] = Microrregiao
 			                        )
 			                    )
 			    VAR BanCid = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_cidade] = 1,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_cidade] = 1,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[geohash] = Geohash
+			                            fat_notas,
+			                            fat_notas[geohash] = Geohash
 			                        )
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
@@ -351,24 +340,24 @@ table Medidas
 	measure 'Top 2 - Bandeira' = ```
 			
 			
-			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
-			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
-			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			    VAR N_cid = DISTINCTCOUNT(fat_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(fat_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(fat_notas[geohash])
 			
 			    VAR BanMR = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_microrregiao] = 2,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_microrregiao] = 2,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                            fat_notas,
+			                            fat_notas[Microrregiao] = Microrregiao
 			                        )
 			                    )
 			    VAR BanCid = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_cidade] = 2,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_cidade] = 2,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[geohash] = Geohash
+			                            fat_notas,
+			                            fat_notas[geohash] = Geohash
 			                        )
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
@@ -379,24 +368,24 @@ table Medidas
 	measure 'Top 3 - Bandeira' = ```
 			
 			
-			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
-			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
-			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			    VAR N_cid = DISTINCTCOUNT(fat_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(fat_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(fat_notas[geohash])
 			
 			    VAR BanMR = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_microrregiao] = 3,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_microrregiao] = 3,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                            fat_notas,
+			                            fat_notas[Microrregiao] = Microrregiao
 			                        )
 			                    )
 			    VAR BanCid = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_cidade] = 3,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_cidade] = 3,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[geohash] = Geohash
+			                            fat_notas,
+			                            fat_notas[geohash] = Geohash
 			                        )
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
@@ -407,24 +396,24 @@ table Medidas
 	measure 'Top 4 - Bandeira' = ```
 			
 			
-			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
-			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
-			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			    VAR N_cid = DISTINCTCOUNT(fat_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(fat_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(fat_notas[geohash])
 			
 			    VAR BanMR = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_microrregiao] = 4,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_microrregiao] = 4,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                            fat_notas,
+			                            fat_notas[Microrregiao] = Microrregiao
 			                        )
 			                    )
 			    VAR BanCid = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_cidade] = 4,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_cidade] = 4,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[geohash] = Geohash
+			                            fat_notas,
+			                            fat_notas[geohash] = Geohash
 			                        )
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
@@ -435,24 +424,24 @@ table Medidas
 	measure 'Top 5 - Bandeira' = ```
 			
 			
-			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
-			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
-			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			    VAR N_cid = DISTINCTCOUNT(fat_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(fat_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(fat_notas[geohash])
 			
 			    VAR BanMR = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_microrregiao] = 5,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_microrregiao] = 5,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                            fat_notas,
+			                            fat_notas[Microrregiao] = Microrregiao
 			                        )
 			                    )
 			    VAR BanCid = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_cidade] = 5,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_cidade] = 5,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[geohash] = Geohash
+			                            fat_notas,
+			                            fat_notas[geohash] = Geohash
 			                        )
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
@@ -463,24 +452,24 @@ table Medidas
 	measure 'Top 6 - Bandeira' = ```
 			
 			
-			    VAR N_cid = DISTINCTCOUNT(silver_menorPreco_notas[cidade])
-			    VAR Microrregiao = SELECTEDVALUE(silver_menorPreco_notas[microrregiao])
-			    VAR Geohash = SELECTEDVALUE(silver_menorPreco_notas[geohash])
+			    VAR N_cid = DISTINCTCOUNT(fat_notas[cidade])
+			    VAR Microrregiao = SELECTEDVALUE(fat_notas[microrregiao])
+			    VAR Geohash = SELECTEDVALUE(fat_notas[geohash])
 			
 			    VAR BanMR = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_microrregiao] = 6,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_microrregiao] = 6,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[Microrregiao] = Microrregiao
+			                            fat_notas,
+			                            fat_notas[Microrregiao] = Microrregiao
 			                        )
 			                    )
 			    VAR BanCid = CALCULATE(
-			                      SELECTEDVALUE(silver_menorPreco_notas[bandeira]), 
-			                        silver_menorPreco_notas[rank_cidade] = 6,
+			                      SELECTEDVALUE(fat_notas[bandeira]), 
+			                        fat_notas[rank_cidade] = 6,
 			                        FILTER(
-			                            silver_menorPreco_notas,
-			                            silver_menorPreco_notas[geohash] = Geohash
+			                            fat_notas,
+			                            fat_notas[geohash] = Geohash
 			                        )
 			                    )
 			    RETURN COALESCE(IF(N_cid>1, BanMR, BanCid),"-")
@@ -499,11 +488,11 @@ table Medidas
 		displayFolder: Bandeiras
 		lineageTag: 2fed4849-4ae4-400a-92dc-09a28fc646d1
 
-	measure 'Texto - Razão Social' = COALESCE(IF(DISTINCTCOUNT(silver_menorPreco_notas[razao_social]) > 1, "NÃO SELECIONADA", SELECTEDVALUE(silver_menorPreco_notas[razao_social])),"NÃO SELECIONADA")
+	measure 'Texto - Razão Social' = COALESCE(IF(DISTINCTCOUNT(fat_notas[razao_social]) > 1, "NÃO SELECIONADA", SELECTEDVALUE(fat_notas[razao_social])),"NÃO SELECIONADA")
 		displayFolder: Razão Social
 		lineageTag: e24b2b68-ec76-4b81-82ca-cc72dbc43592
 
-	measure 'Menor Valor - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", CALCULATE(MIN(silver_menorPreco_notas[valor])))
+	measure 'Menor Valor - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", CALCULATE(MIN(fat_notas[valor])))
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Razão Social
 		lineageTag: 850b1a86-0933-403d-a923-f2c58e83555b
@@ -515,14 +504,14 @@ table Medidas
 		displayFolder: Razão Social
 		lineageTag: 195c36ee-c082-4cd0-b934-702944cc4c9e
 
-	measure 'Média Desconto - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", AVERAGE(silver_menorPreco_notas[valor_desconto]))
+	measure 'Média Desconto - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", AVERAGE(fat_notas[valor_desconto]))
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Razão Social
 		lineageTag: 6de01c53-326f-4256-8dcc-937f6e36efb4
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Média Valor - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", AVERAGE(silver_menorPreco_notas[valor]))
+	measure 'Média Valor - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", AVERAGE(fat_notas[valor]))
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Razão Social
 		lineageTag: 1833947b-4bae-414b-a0eb-0b8261aa0fae
@@ -545,13 +534,13 @@ table Medidas
 
 	measure 'Qtd Notas' = ```
 			
-			    COUNTROWS(silver_menorPreco_notas)
+			    COUNTROWS(fat_notas)
 			```
 		formatString: 0
 		displayFolder: Quantidades
 		lineageTag: ecf985aa-9453-43f3-bf2c-2bd15abaddf5
 
-	measure 'Outras Bandeiras - Menor Preço' = COALESCE(CALCULATE(MIN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira] = "OUTRAS BANDEIRAS"),"-")
+	measure 'Outras Bandeiras - Menor Preço' = COALESCE(CALCULATE(MIN(fat_notas[valor]), fat_notas[bandeira] = "OUTRAS BANDEIRAS"),"-")
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Top Preço
 		lineageTag: ad8bbe04-d6d0-4b82-8e07-0fa6bea42a9b
@@ -565,7 +554,7 @@ table Medidas
 			    RETURN COALESCE(CALCULATE(
 			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
 			                        dim_logos[bandeira] = Bandeira,
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[bandeira], silver_menorPreco_notas[microrregiao], silver_menorPreco_notas[cidade])),
+			                        ALLEXCEPT(fat_notas, fat_notas[bandeira], fat_notas[microrregiao], fat_notas[cidade])),
 			                    "-")
 			```
 		displayFolder: Imagens
@@ -578,7 +567,7 @@ table Medidas
 			    RETURN COALESCE(CALCULATE(
 			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
 			                        dim_logos[bandeira] = Bandeira,
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[bandeira], silver_menorPreco_notas[Microrregiao], silver_menorPreco_notas[cidade])),
+			                        ALLEXCEPT(fat_notas, fat_notas[bandeira], fat_notas[Microrregiao], fat_notas[cidade])),
 			                    "-")
 			```
 		displayFolder: Imagens
@@ -589,7 +578,7 @@ table Medidas
 			                COALESCE(CALCULATE(
 			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
 			                        FILTER(dim_logos, dim_logos[bandeira] = [Top 3 - Bandeira]),
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[Microrregiao], silver_menorPreco_notas[cidade])),
+			                        ALLEXCEPT(fat_notas, fat_notas[Microrregiao], fat_notas[cidade])),
 			                    "-")
 			```
 		displayFolder: Imagens
@@ -602,7 +591,7 @@ table Medidas
 			    RETURN COALESCE(CALCULATE(
 			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
 			                        dim_logos[bandeira] = Bandeira,
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[bandeira], silver_menorPreco_notas[Microrregiao], silver_menorPreco_notas[cidade])),
+			                        ALLEXCEPT(fat_notas, fat_notas[bandeira], fat_notas[Microrregiao], fat_notas[cidade])),
 			                    "-")
 			```
 		displayFolder: Imagens
@@ -615,7 +604,7 @@ table Medidas
 			    RETURN COALESCE(CALCULATE(
 			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
 			                        dim_logos[bandeira] = Bandeira,
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[bandeira], silver_menorPreco_notas[Microrregiao], silver_menorPreco_notas[cidade])),
+			                        ALLEXCEPT(fat_notas, fat_notas[bandeira], fat_notas[Microrregiao], fat_notas[cidade])),
 			                    "-")
 			```
 		displayFolder: Imagens
@@ -628,7 +617,7 @@ table Medidas
 			    RETURN COALESCE(CALCULATE(
 			                        SELECTEDVALUE(dim_logos[logo_bandeira]),
 			                        dim_logos[bandeira] = Bandeira,
-			                        ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[bandeira], silver_menorPreco_notas[Microrregiao], silver_menorPreco_notas[cidade])),
+			                        ALLEXCEPT(fat_notas, fat_notas[bandeira], fat_notas[Microrregiao], fat_notas[cidade])),
 			                    "-")
 			```
 		displayFolder: Imagens
@@ -638,11 +627,11 @@ table Medidas
 			
 			
 			VAR Tabela = 
-			    SUMMARIZE(silver_menorPreco_notas, silver_menorPreco_notas[valor],
-			    "QTD", COUNT(silver_menorPreco_notas[descricao])
+			    SUMMARIZE(fat_notas, fat_notas[valor],
+			    "QTD", COUNT(fat_notas[gtin])
 			    )
 			VAR Maximo = MAXX(Tabela, [QTD])
-			RETURN COALESCE(MAXX(FILTER(Tabela, [QTD] = Maximo), silver_menorPreco_notas[valor]),AVERAGE(silver_menorPreco_notas[valor]))
+			RETURN COALESCE(MAXX(FILTER(Tabela, [QTD] = Maximo), fat_notas[valor]),AVERAGE(fat_notas[valor]))
 			```
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
@@ -650,14 +639,14 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure Mediana = COALESCE(MEDIAN(silver_menorPreco_notas[valor]),AVERAGE(silver_menorPreco_notas[valor]))
+	measure Mediana = COALESCE(MEDIAN(fat_notas[valor]),AVERAGE(fat_notas[valor]))
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
 		lineageTag: fd86a17f-cbe5-40da-b8b8-ce93c1f8e538
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Menor Valor' = COALESCE(MIN(silver_menorPreco_notas[valor]),AVERAGE(silver_menorPreco_notas[valor]))
+	measure 'Menor Valor' = COALESCE(MIN(fat_notas[valor]),AVERAGE(fat_notas[valor]))
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
 		lineageTag: 2c6ec65c-96ac-40af-b342-93a11cc4fae6
@@ -669,8 +658,8 @@ table Medidas
 			
 			COALESCE(
 			        CALCULATE(
-			            MAX(silver_menorPreco_notas[date]), 
-			            FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = "OUTRAS BANDEIRAS")
+			            MAX(fat_notas[date]), 
+			            FILTER(fat_notas, fat_notas[bandeira] = "OUTRAS BANDEIRAS")
 			        ), 
 			        "-"
 			    )
@@ -681,14 +670,14 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isCustom":true}
 
-	measure 'Mediana TXT' = COALESCE(MEDIAN(silver_menorPreco_notas[valor]),"-")
+	measure 'Mediana TXT' = COALESCE(MEDIAN(fat_notas[valor]),"-")
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
 		lineageTag: 45e552a3-11d3-453e-a016-8448862972cd
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Menor Valor TXT' = COALESCE(MIN(silver_menorPreco_notas[valor]),"-")
+	measure 'Menor Valor TXT' = COALESCE(MIN(fat_notas[valor]),"-")
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
 		lineageTag: 4bbe0ec9-f78d-4eb6-8a04-ca8b0e62e4f7
@@ -699,11 +688,11 @@ table Medidas
 			
 			
 			VAR Tabela = 
-			    SUMMARIZE(silver_menorPreco_notas, silver_menorPreco_notas[valor],
-			    "QTD", COUNT(silver_menorPreco_notas[descricao])
+			    SUMMARIZE(fat_notas, fat_notas[valor],
+			    "QTD", COUNT(fat_notas[gtin])
 			    )
 			VAR Maximo = MAXX(Tabela, [QTD])
-			RETURN COALESCE(MAXX(FILTER(Tabela, [QTD] = Maximo), silver_menorPreco_notas[valor]),"-")
+			RETURN COALESCE(MAXX(FILTER(Tabela, [QTD] = Maximo), fat_notas[valor]),"-")
 			```
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
@@ -715,18 +704,18 @@ table Medidas
 			
 			VAR TabelaContagem =
 			    ADDCOLUMNS (
-			        VALUES ( silver_menorPreco_notas[microrregiao] ),
-			        "@Contagem", CALCULATE ( COUNTROWS ( silver_menorPreco_notas ) )
+			        VALUES ( fat_notas[microrregiao] ),
+			        "@Contagem", CALCULATE ( COUNTROWS ( fat_notas ) )
 			    )
 			VAR TabelaTop1 =
 			    TOPN (
 			        1,
 			        TabelaContagem,
 			        [@Contagem], DESC,                // 1ª Regra: Prioriza pela MAIOR contagem (DESC)
-			        silver_menorPreco_notas[microrregiao], ASC // 2ª Regra: Desempata por ordem alfabética (ASC)
+			        fat_notas[microrregiao], ASC // 2ª Regra: Desempata por ordem alfabética (ASC)
 			    )
 			VAR Resultado =
-			    MAXX ( TabelaTop1, silver_menorPreco_notas[microrregiao] ) // Extrai o valor de texto da tabela de 1 linha
+			    MAXX ( TabelaTop1, fat_notas[microrregiao] ) // Extrai o valor de texto da tabela de 1 linha
 			
 			RETURN
 			    Resultado
@@ -736,7 +725,7 @@ table Medidas
 	measure 'Eixo Max.' =
 			
 			
-			VAR Valor = MAX(silver_menorPreco_notas[valor])
+			VAR Valor = MAX(fat_notas[valor])
 			
 			RETURN Valor + Valor*0.10
 		displayFolder: Geral
@@ -747,7 +736,7 @@ table Medidas
 	measure 'Eixo Min.' =
 			
 			
-			VAR Valor = MIN(silver_menorPreco_notas[valor])
+			VAR Valor = MIN(fat_notas[valor])
 			
 			RETURN Valor - Valor*0.10
 		displayFolder: Geral
@@ -755,14 +744,14 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Mediana TXT S/OB' = COALESCE(CALCULATE(MEDIAN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira]<>"Outras Bandeiras"),"-")
+	measure 'Mediana TXT S/OB' = COALESCE(CALCULATE(MEDIAN(fat_notas[valor]), fat_notas[bandeira]<>"Outras Bandeiras"),"-")
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
 		lineageTag: 3629d8bd-75dc-4ab6-8f55-d5ee4a884e79
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Menor Valor TXT S/OB' = COALESCE(CALCULATE(MIN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira]<>"Outras Bandeiras"),"-")
+	measure 'Menor Valor TXT S/OB' = COALESCE(CALCULATE(MIN(fat_notas[valor]), fat_notas[bandeira]<>"Outras Bandeiras"),"-")
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
 		lineageTag: 113caed7-19cf-4d4b-a39b-1d6d8214cc06
@@ -773,11 +762,11 @@ table Medidas
 			
 			
 			VAR Tabela = 
-			    SUMMARIZE(silver_menorPreco_notas, silver_menorPreco_notas[valor],
-			    "QTD", COUNT(silver_menorPreco_notas[descricao])
+			    SUMMARIZE(fat_notas, fat_notas[valor],
+			    "QTD", COUNT(fat_notas[gtin])
 			    )
 			VAR Maximo = MAXX(Tabela, [QTD])
-			RETURN COALESCE(CALCULATE(MAXX(FILTER(Tabela, [QTD] = Maximo), silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira]<>"Outras Bandeiras"),"-")
+			RETURN COALESCE(CALCULATE(MAXX(FILTER(Tabela, [QTD] = Maximo), fat_notas[valor]), fat_notas[bandeira]<>"Outras Bandeiras"),"-")
 			```
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
@@ -785,14 +774,14 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Mediana S/OB' = COALESCE(CALCULATE(MEDIAN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira]<>"Outras Bandeiras"),AVERAGE(silver_menorPreco_notas[valor]))
+	measure 'Mediana S/OB' = COALESCE(CALCULATE(MEDIAN(fat_notas[valor]), fat_notas[bandeira]<>"Outras Bandeiras"),AVERAGE(fat_notas[valor]))
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
 		lineageTag: a364fcf7-7ea6-4b80-876d-e73572ffd163
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Menor Valor S/OB' = COALESCE(CALCULATE(MIN(silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira]<>"Outras Bandeiras"),AVERAGE(silver_menorPreco_notas[valor]))
+	measure 'Menor Valor S/OB' = COALESCE(CALCULATE(MIN(fat_notas[valor]), fat_notas[bandeira]<>"Outras Bandeiras"),AVERAGE(fat_notas[valor]))
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
 		lineageTag: dbe06a78-f071-4098-9ef7-d777276d596d
@@ -803,11 +792,11 @@ table Medidas
 			
 			
 			VAR Tabela = 
-			    SUMMARIZE(silver_menorPreco_notas, silver_menorPreco_notas[valor],
-			    "QTD", COUNT(silver_menorPreco_notas[descricao])
+			    SUMMARIZE(fat_notas, fat_notas[valor],
+			    "QTD", COUNT(fat_notas[gtin])
 			    )
 			VAR Maximo = MAXX(Tabela, [QTD])
-			RETURN COALESCE(CALCULATE(MAXX(FILTER(Tabela, [QTD] = Maximo), silver_menorPreco_notas[valor]), silver_menorPreco_notas[bandeira] <> "Outras Bandeiras"),AVERAGE(silver_menorPreco_notas[valor]))
+			RETURN COALESCE(CALCULATE(MAXX(FILTER(Tabela, [QTD] = Maximo), fat_notas[valor]), fat_notas[bandeira] <> "Outras Bandeiras"),AVERAGE(fat_notas[valor]))
 			```
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Geral
@@ -815,24 +804,321 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Menor Preço 1' = CALCULATE(MIN(silver_menorPreco_notas[valor]), FILTER(silver_menorPreco_notas, silver_menorPreco_notas[bandeira] = [Top 1 - Bandeira]), ALLEXCEPT(silver_menorPreco_notas, silver_menorPreco_notas[microrregiao], silver_menorPreco_notas[cidade], silver_menorPreco_notas[PRODUTO]))
+	measure 'Menor Preço 1' = CALCULATE(MIN(fat_notas[valor]), FILTER(fat_notas, fat_notas[bandeira] = [Top 1 - Bandeira]), ALLEXCEPT(fat_notas, fat_notas[microrregiao], fat_notas[cidade], fat_notas[PRODUTO]))
 		displayFolder: Geral
 		lineageTag: 880f7acf-8606-4fee-8205-3417c3d0030f
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Período do Produto' = ```
-			"De "& DATEVALUE(SELECTEDVALUE(bronze_menorPreco_produtos[data_atualizacao])) &" á "& DATEVALUE(SELECTEDVALUE(bronze_menorPreco_produtos[data_atualizacao]))+30 
+			"De "& DATEVALUE(SELECTEDVALUE(dim_produtos[data_atualizacao])) &" á "& DATEVALUE(SELECTEDVALUE(dim_produtos[data_atualizacao]))+30 
 			```
 		lineageTag: 6eac3d40-2c03-4f19-b6ae-b25d4aa6127f
 
-	measure DataHoraTexto = FORMAT(SELECTEDVALUE(silver_menorPreco_notas[date]), "dd/MM/yyyy HH:mm:ss")
+	measure DataHoraTexto = FORMAT(SELECTEDVALUE(fat_notas[date]), "dd/MM/yyyy HH:mm:ss")
 		displayFolder: Geral
 		lineageTag: 50e0ef95-0b04-4396-9a22-8c282b793c48
 
 	measure 'Data Limite' = TODAY()-15
 		formatString: Short Date
 		lineageTag: bb4d1b11-c940-43b0-8037-ef043ca1da81
+
+	measure 'Media Mercado Desconto' = COALESCE(AVERAGE(fat_notas[valor_desconto]),0)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: f31d5dde-97cc-4c42-b407-922e0b0571de
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '%Media Mercado Desconto' = DIVIDE([Media Mercado Desconto],[Media Mercado PMC],0)
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		displayFolder: Desconto
+		lineageTag: 1319ffb8-3fe2-40db-bf74-7a772d4e46bd
+
+	measure 'Media Loja Desconto Card' = ```
+			
+			VAR QtdProdutosSelecionados =
+			    CALCULATE(
+			        DISTINCTCOUNT(dim_produtos[PRODUTO]),
+			        ALLSELECTED(dim_produtos)
+			    )
+			VAR MediaValor =
+			    AVERAGE(view_menorPreco_valor_email[valor_desconto])
+			RETURN
+			IF(
+			    QtdProdutosSelecionados > 1,
+			    "-",
+			    IF(
+			        ISBLANK(MediaValor),
+			        "N.E.",
+			        MediaValor
+			    )
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: b582291a-f350-4ff3-ae6c-76f0fbe7c1cd
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '%Media Loja Desconto Card' = ```
+			
+			VAR QtdProdutosSelecionados =
+			    CALCULATE(
+			        DISTINCTCOUNT(dim_produtos[PRODUTO]),
+			        ALLSELECTED(dim_produtos)
+			    )
+			
+			VAR ValorDesconto = [Media Loja Desconto Card]
+			VAR ValorPMC = [Media Loja PMC Card]
+			
+			-- Quando uma das medidas retornar "Não Encontrado", ela vira BLANK no VAR acima
+			VAR ValorDescontoNum =
+			    IF(ISNUMBER(ValorDesconto), ValorDesconto)
+			VAR ValorPMCNum =
+			    IF(ISNUMBER(ValorPMC), ValorPMC)
+			
+			RETURN
+			IF(
+			    QtdProdutosSelecionados > 1,
+			    "-",
+			    IF(
+			        OR(ISBLANK(ValorDescontoNum), ISBLANK(ValorPMCNum)),
+			        "N.E.",
+			        DIVIDE(ValorDescontoNum, ValorPMCNum, 0)
+			    )
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Desconto
+		lineageTag: c470c8c1-fe44-41e5-bbdb-e982ee31e7f3
+
+	measure 'Media Loja PMC Card' = ```
+			
+			VAR QtdProdutosSelecionados =
+			    CALCULATE(
+			        DISTINCTCOUNT(dim_produtos[PRODUTO]),
+			        ALLSELECTED(dim_produtos)
+			    )
+			VAR MediaValor =
+			    AVERAGE(view_menorPreco_valor_email[valor_tabela])
+			RETURN
+			IF(
+			    QtdProdutosSelecionados > 1,
+			    "-",
+			    IF(
+			        ISBLANK(MediaValor),
+			        "N.E.",
+			        MediaValor
+			    )
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: 542141c8-5370-458b-8683-f8f4e6b202fa
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Media Mercado PMC' = COALESCE(AVERAGE(fat_notas[valor_tabela]),0)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: 20934ff1-ff21-4456-889d-6568e43e8932
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure teste = [Media Loja Desconto Card]/[Media Loja PMC Card]
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Geral
+		lineageTag: 64f02ae2-f62d-45bb-b2d6-ae7723eea26f
+
+	measure 'Media Mercado PMC Card' = ```
+			
+			VAR QtdProdutosSelecionados =
+			    CALCULATE(
+			        DISTINCTCOUNT(dim_produtos[PRODUTO]),
+			        ALLSELECTED(dim_produtos)
+			    )
+			RETURN
+			IF(
+			    QtdProdutosSelecionados > 1,
+			    "-",
+			    COALESCE(AVERAGE(fat_notas[valor_tabela]), 0)
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: 37ba9695-6298-4c62-a86f-bec0d922a0d3
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Media Mercado Desconto Card' = ```
+			
+			VAR QtdProdutosSelecionados =
+			    CALCULATE(
+			        DISTINCTCOUNT(dim_produtos[PRODUTO]),
+			        ALLSELECTED(dim_produtos)
+			    )
+			RETURN
+			IF(
+			    QtdProdutosSelecionados > 1,
+			    "-",
+			    COALESCE(AVERAGE(fat_notas[valor_desconto]), 0)
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: 98152a50-769d-4bf6-a507-183dd93500ce
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '%Media Mercado Desconto Card' = ```
+			
+			IF(
+			    NOT HASONEVALUE(dim_produtos[PRODUTO]),
+			    "-",
+			    DIVIDE([Media Mercado Desconto], [Media Mercado PMC], 0)
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Desconto
+		lineageTag: b9a10d28-d569-4599-8384-8204a85eebea
+
+	measure 'Media Loja PMC' = ```
+			
+			VAR MediaValor =
+			    AVERAGE(view_menorPreco_valor_email[valor_tabela])
+			RETURN
+			IF(
+			    ISBLANK(MediaValor),
+			    "Não Encontrado",
+			    MediaValor
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: 0371a19f-6f97-494b-a294-f30ea8706a7c
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Media Loja Desconto' = ```
+			
+			VAR MediaValor =
+			    AVERAGE(view_menorPreco_valor_email[valor_desconto])
+			RETURN
+			IF(
+			    ISBLANK(MediaValor),
+			    "Não Encontrado",
+			    MediaValor
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: f7492392-603a-461e-8c59-2e682d3198a5
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '%Media Loja Desconto' = ```
+			
+			VAR Desconto = [Media Loja Desconto]
+			VAR PMC = [Media Loja PMC]
+			
+			VAR DescontoNum =
+			    IF(ISNUMBER(Desconto), Desconto)
+			
+			VAR PMCNum =
+			    IF(ISNUMBER(PMC), PMC)
+			
+			RETURN
+			IF(
+			    OR(ISBLANK(DescontoNum), ISBLANK(PMCNum)),
+			    "Não Encontrado",
+			    DIVIDE(DescontoNum, PMCNum, 0)
+			)
+			
+			```
+		formatString: #,0.00%;-#,0.00%;#,0.00%
+		displayFolder: Desconto
+		lineageTag: 2f3657c9-8571-44ac-98fc-249ecaec6bfb
+
+	measure 'Media Mercado Final Card' = ```
+			
+			VAR QtdProdutosSelecionados =
+			    CALCULATE(
+			        DISTINCTCOUNT(dim_produtos[PRODUTO]),
+			        ALLSELECTED(dim_produtos)
+			    )
+			RETURN
+			IF(
+			    QtdProdutosSelecionados > 1,
+			    "-",
+			    COALESCE(AVERAGE(fat_notas[valor]), 0)
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: 10adbb5f-9397-44f7-b145-3e9031a9f3b0
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Media Loja Final Card' = ```
+			
+			VAR QtdProdutosSelecionados =
+			    CALCULATE(
+			        DISTINCTCOUNT(dim_produtos[PRODUTO]),
+			        ALLSELECTED(dim_produtos)
+			    )
+			VAR MediaValor =
+			    AVERAGE(view_menorPreco_valor_email[valor])
+			RETURN
+			IF(
+			    QtdProdutosSelecionados > 1,
+			    "-",
+			    IF(
+			        ISBLANK(MediaValor),
+			        "N.E.",
+			        MediaValor
+			    )
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: 63d21185-0348-4bff-aeea-4b610cf804ff
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Media Loja Final' = ```
+			
+			VAR MediaValor =
+			    AVERAGE(view_menorPreco_valor_email[valor])
+			RETURN
+			IF(
+			    ISBLANK(MediaValor),
+			    "Não Encontrado",
+			    MediaValor
+			)
+			
+			```
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Desconto
+		lineageTag: 0998e6da-21b9-4e4e-afbf-2672edd6a007
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Media Mercado Final' = COALESCE(AVERAGE(fat_notas[valor]),0)
+		displayFolder: Desconto
+		lineageTag: 3d75bc14-cac0-487a-8a39-00263397d95f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Column
 		isHidden

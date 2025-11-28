@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "080ad1a259faede9f4bd",
   "position": {
-    "x": 98.2370820668693,
-    "y": 601.09422492401222,
+    "x": 88.861154446177849,
+    "y": 606.05304212168494,
     "z": 5000,
-    "height": 57.38601823708207,
-    "width": 299.57446808510639,
+    "height": 86.864274570982843,
+    "width": 299.53198127925117,
     "tabOrder": 2000
   },
   "visual": {
@@ -21,6 +21,39 @@
                   "PackageName": "RegisteredResources",
                   "PackageType": 1,
                   "ItemName": "Drogamais9162744182169804.png"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "image": [
+        {
+          "properties": {
+            "sourceFile": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'logo altaneiro.png'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "logo_altaneiro6383855482204817.png"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Normal'"
+                    }
+                  }
                 }
               }
             }

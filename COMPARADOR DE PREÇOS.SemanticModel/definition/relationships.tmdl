@@ -3,11 +3,6 @@ relationship a5e906d3-b7af-41dc-b635-bfcdceb1c921
 	fromColumn: Atualização.'Última Atualização'
 	toColumn: LocalDateTable_8dbea108-b7a3-469d-95e0-d307a5c65791.Date
 
-relationship c2a8874d-259c-4ac1-ba20-1ecf0e501818
-	joinOnDateBehavior: datePartOnly
-	fromColumn: bronze_menorPreco_produtos.data_atualizacao
-	toColumn: LocalDateTable_89e642b2-0d1e-4f88-bd03-8c98c97e4b64.Date
-
 relationship a1a5611b-37ff-4065-94b1-4a81b4cf2154
 	joinOnDateBehavior: datePartOnly
 	fromColumn: dCalendario.Date
@@ -18,11 +13,33 @@ relationship 4f31ff57-4589-45e2-94db-d7c94bbf5e70
 	fromColumn: dCalendario.'Início da semana'
 	toColumn: LocalDateTable_19ac7ba3-0c5b-4049-986a-6ab1c60cb286.Date
 
-relationship bff8dbf7-5f15-8e99-13d1-88dc1af47e27
-	fromColumn: silver_menorPreco_notas.gtin
-	toColumn: bronze_menorPreco_produtos.gtin
-
 relationship 47fd04b6-5ba7-13d2-8cb9-6d447d8bab32
-	fromColumn: silver_menorPreco_notas.DateRelacionamento
+	fromColumn: fat_notas.DateRelacionamento
 	toColumn: dCalendario.Date
+
+relationship ffa807c3-0f23-4f66-851c-b70fe8ea8cb7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_produtos.data_atualizacao
+	toColumn: LocalDateTable_089ab086-3113-4901-b5b1-02f3ce53febf.Date
+
+relationship a9093fc0-fbf8-603c-00ac-7676c50c81f1
+	fromColumn: fat_notas.gtin
+	toColumn: dim_produtos.gtin
+
+relationship c8a41b6e-c40f-44f4-858b-92b99d92b77e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_lojas_menorPreco.data_atualizacao
+	toColumn: LocalDateTable_f8bfc86f-fa9b-4214-8cbd-8773e4110324.Date
+
+relationship dc13240c-034d-ac9e-4c46-46755e3bd3fb
+	fromColumn: fat_notas.id_loja
+	toColumn: dim_lojas_menorPreco.id_loja
+
+relationship AutoDetected_feae7af8-a14b-48e8-8009-2a1e8d6e10a2
+	fromColumn: view_menorPreco_valor_email.email
+	toColumn: view_menorPreco_lojas_email.email
+
+relationship 54121d23-fbd6-826c-0d9c-7a9b4869c2bb
+	fromColumn: view_menorPreco_valor_email.gtin
+	toColumn: dim_produtos.gtin
 

@@ -1,0 +1,70 @@
+table view_menorPreco_valor_email
+	lineageTag: a0705ca3-80e5-406c-8cf1-230dad99f336
+
+	column gtin
+		dataType: string
+		lineageTag: 970a0017-d8fb-47ea-a020-dab0f7f5d571
+		summarizeBy: none
+		sourceColumn: gtin
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUTO
+		dataType: string
+		lineageTag: 4a0f04ae-565d-43f5-a8f6-4410d441830f
+		summarizeBy: none
+		sourceColumn: PRODUTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor
+		dataType: double
+		lineageTag: c7b1e502-acc5-479f-b7f5-af50cadf9e83
+		summarizeBy: sum
+		sourceColumn: valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column valor_desconto
+		dataType: double
+		lineageTag: 607fd87e-60f3-43d6-86ab-58e717452de6
+		summarizeBy: sum
+		sourceColumn: valor_desconto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column valor_tabela
+		dataType: double
+		lineageTag: 42cf7874-5c0c-4914-a0ee-0d2fcd8303f9
+		summarizeBy: sum
+		sourceColumn: valor_tabela
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column email
+		dataType: string
+		lineageTag: 6be6fa42-8c60-4bb3-ae18-b932724d751f
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	partition view_menorPreco_valor_email = m
+		mode: import
+		source =
+				let
+				    Fonte = MariaDB.Contents("10.48.12.20:3306;dbDrogamais", null, null),
+				    view_menorPreco_valor_email_View = Fonte{[Name="view_menorPreco_valor_email",Kind="View"]}[Data]
+				in
+				    view_menorPreco_valor_email_View
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

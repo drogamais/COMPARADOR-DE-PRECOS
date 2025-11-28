@@ -172,8 +172,8 @@ table dCalendario
 		source = ```
 				
 				
-				var datamax = MAX('silver_menorPreco_notas'[date])
-				var datamin = MIN('silver_menorPreco_notas'[date])
+				var datamax = MAX('fat_notas'[date])
+				var datamin = MIN('fat_notas'[date])
 				
 				
 				return ADDCOLUMNS(CALENDAR(datamin,datamax),

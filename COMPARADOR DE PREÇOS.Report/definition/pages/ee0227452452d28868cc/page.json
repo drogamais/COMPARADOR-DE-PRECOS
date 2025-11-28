@@ -13,7 +13,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "silver_menorPreco_notas"
+                "Entity": "fat_notas"
               }
             },
             "Property": "date"

@@ -149,23 +149,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2c75a0b608ab948cc2ed",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Top 3 - (Menor Preço)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

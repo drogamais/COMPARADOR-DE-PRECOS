@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "silver_menorPreco_notas"
+                      "Entity": "fat_notas"
                     }
                   },
                   "Property": "PRODUTO"
@@ -41,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "silver_menorPreco_notas"
+                          "Entity": "fat_notas"
                         }
                       },
                       "Property": "id_nota"
@@ -65,7 +65,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "silver_menorPreco_notas"
+                        "Entity": "fat_notas"
                       }
                     },
                     "Property": "id_nota"

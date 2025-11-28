@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "silver_menorPreco_notas"
+                      "Entity": "fat_notas"
                     }
                   },
                   "Property": "razao_social"
@@ -35,7 +35,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "silver_menorPreco_notas"
+                      "Entity": "fat_notas"
                     }
                   },
                   "Property": "nome_fantasia"
@@ -50,7 +50,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "silver_menorPreco_notas"
+                      "Entity": "fat_notas"
                     }
                   },
                   "Property": "bandeira"
@@ -67,7 +67,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "silver_menorPreco_notas"
+                          "Entity": "fat_notas"
                         }
                       },
                       "Property": "id_nota"
@@ -85,7 +85,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "silver_menorPreco_notas"
+                      "Entity": "fat_notas"
                     }
                   },
                   "Property": "valor"

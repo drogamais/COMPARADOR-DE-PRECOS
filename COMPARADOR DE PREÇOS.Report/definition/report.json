@@ -20,7 +20,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "silver_menorPreco_notas"
+                "Entity": "fat_notas"
               }
             },
             "Property": "considerado"
@@ -32,7 +32,7 @@
           "From": [
             {
               "Name": "s",
-              "Entity": "silver_menorPreco_notas",
+              "Entity": "fat_notas",
               "Type": 0
             }
           ],
@@ -75,7 +75,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "silver_menorPreco_notas"
+                "Entity": "fat_notas"
               }
             },
             "Property": "bandeira"
@@ -87,7 +87,7 @@
           "From": [
             {
               "Name": "s",
-              "Entity": "silver_menorPreco_notas",
+              "Entity": "fat_notas",
               "Type": 0
             }
           ],
@@ -172,7 +172,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -307,6 +307,51 @@
         {
           "name": "invoice-white5760853051532573.png",
           "path": "invoice-white5760853051532573.png",
+          "type": "Image"
+        },
+        {
+          "name": "mercado-global(1)3321591854063064.png",
+          "path": "mercado-global(1)3321591854063064.png",
+          "type": "Image"
+        },
+        {
+          "name": "gerente(1)5429601437970369.png",
+          "path": "gerente(1)5429601437970369.png",
+          "type": "Image"
+        },
+        {
+          "name": "desconto(1)5178824076522983.png",
+          "path": "desconto(1)5178824076522983.png",
+          "type": "Image"
+        },
+        {
+          "name": "logo_altaneiro6383855482204817.png",
+          "path": "logo_altaneiro6383855482204817.png",
+          "type": "Image"
+        },
+        {
+          "name": "logo_altaneiro8818128051078298.png",
+          "path": "logo_altaneiro8818128051078298.png",
+          "type": "Image"
+        },
+        {
+          "name": "logo_altaneiro5814519136811525.png",
+          "path": "logo_altaneiro5814519136811525.png",
+          "type": "Image"
+        },
+        {
+          "name": "logo_altaneiro9952612446068748.png",
+          "path": "logo_altaneiro9952612446068748.png",
+          "type": "Image"
+        },
+        {
+          "name": "logo_altaneiro7368530674909916.png",
+          "path": "logo_altaneiro7368530674909916.png",
+          "type": "Image"
+        },
+        {
+          "name": "logo_altaneiro5043930554527557.png",
+          "path": "logo_altaneiro5043930554527557.png",
           "type": "Image"
         }
       ]

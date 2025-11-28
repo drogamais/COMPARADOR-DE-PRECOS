@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "silver_menorPreco_notas"
+                      "Entity": "fat_notas"
                     }
                   },
                   "Property": "microrregiao"
@@ -64,8 +64,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "s",
-                    "Entity": "silver_menorPreco_notas",
+                    "Name": "f",
+                    "Entity": "fat_notas",
                     "Type": 0
                   }
                 ],
@@ -78,7 +78,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "s"
+                                  "Source": "f"
                                 }
                               },
                               "Property": "microrregiao"

@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["Atualização","dim_logos","bronze_menorPreco_produtos","silver_menorPreco_notas"]
+annotation PBI_QueryOrder = ["Atualização","dim_logos","fat_notas","dim_produtos","dim_lojas_menorPreco","view_menorPreco_lojas_email","view_menorPreco_valor_email"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -18,11 +18,18 @@ ref table Atualização
 ref table dCalendario
 ref table LocalDateTable_8dbea108-b7a3-469d-95e0-d307a5c65791
 ref table dim_logos
-ref table bronze_menorPreco_produtos
-ref table LocalDateTable_89e642b2-0d1e-4f88-bd03-8c98c97e4b64
-ref table silver_menorPreco_notas
+ref table fat_notas
 ref table LocalDateTable_a867240f-3b04-4e86-b00c-9db76755d7e7
 ref table LocalDateTable_19ac7ba3-0c5b-4049-986a-6ab1c60cb286
+ref table dim_produtos
+ref table LocalDateTable_089ab086-3113-4901-b5b1-02f3ce53febf
+ref table dim_lojas_menorPreco
+ref table LocalDateTable_f8bfc86f-fa9b-4214-8cbd-8773e4110324
+ref table view_menorPreco_lojas_email
+ref table view_menorPreco_valor_email
+
+ref role ADM
+ref role USUARIOS
 
 ref cultureInfo pt-BR
 

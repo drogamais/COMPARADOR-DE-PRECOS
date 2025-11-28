@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "silver_menorPreco_notas"
+                      "Entity": "fat_notas"
                     }
                   },
                   "Property": "PRODUTO"
                 }
               },
-              "queryRef": "silver_menorPreco_notas.PRODUTO",
+              "queryRef": "fat_notas.PRODUTO",
               "nativeQueryRef": "PRODUTO1",
               "active": true
             }
@@ -63,8 +63,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "s",
-                    "Entity": "silver_menorPreco_notas",
+                    "Name": "f",
+                    "Entity": "fat_notas",
                     "Type": 0
                   }
                 ],
@@ -77,7 +77,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "s"
+                                  "Source": "f"
                                 }
                               },
                               "Property": "PRODUTO"
@@ -88,7 +88,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'7891058015756 - NOVALGINA. - SANOFI-AVENTIS FARMACEUTICA LTDA'"
+                                "Value": "'00000075076825 - DES REXONA CLINICAL NOVO MEN C - ABOVE COSMETICOS'"
                               }
                             }
                           ]
@@ -256,18 +256,77 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ef41716345a3b36cd8d3",
+        "name": "ab3782f79e0099cd1e5d",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "silver_menorPreco_notas"
+                "Entity": "dim_produtos"
               }
             },
             "Property": "PRODUTO"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "dim_produtos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "PRODUTO"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }

@@ -1,0 +1,238 @@
+table fat_notas
+	lineageTag: 6c22bff0-e91f-4136-9738-b8d8483e08e0
+
+	column id_nota
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(255)
+		lineageTag: e88f3dd5-e5d7-4329-9b87-eb3d1980a46c
+		summarizeBy: none
+		sourceColumn: id_nota
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b4722471-5997-4217-a64c-ea7f109c3c26
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_loja
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 96c800ec-4a7f-44fc-ac30-5fcbcd0f3fbd
+		summarizeBy: none
+		sourceColumn: id_loja
+
+		annotation SummarizationSetBy = Automatic
+
+	column geohash
+		dataType: string
+		sourceProviderType: nvarchar(12)
+		lineageTag: 588d9fe7-cb09-451f-ac3c-1a5c1f807943
+		summarizeBy: none
+		sourceColumn: geohash
+
+		annotation SummarizationSetBy = Automatic
+
+	column gtin
+		dataType: string
+		sourceProviderType: nvarchar(14)
+		lineageTag: 6f7cf655-b824-4361-86dd-2fc0c9141833
+		summarizeBy: none
+		sourceColumn: gtin
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		sourceProviderType: decimal(10, 2)
+		lineageTag: bf849638-a0b5-451e-9505-4716f72a5bfb
+		summarizeBy: sum
+		sourceColumn: valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column cidade
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: c263f78e-7d2d-4812-b352-b409721c5137
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_atualizacao
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: datetime2
+		lineageTag: db3fe047-d047-4d70-b292-1f84ae1d8336
+		summarizeBy: none
+		sourceColumn: data_atualizacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column bandeira
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		lineageTag: a6cfac1f-d2a8-4f23-91b1-3173a3da0da3
+		summarizeBy: none
+		sourceColumn: bandeira
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitude
+		dataType: double
+		sourceProviderType: decimal(10, 8)
+		lineageTag: 46eab0b0-c61a-48a3-bd24-e546a8a60674
+		summarizeBy: sum
+		sourceColumn: latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column longitude
+		dataType: double
+		sourceProviderType: decimal(11, 8)
+		lineageTag: c6634ceb-54c9-4a7c-b121-6aefcbb067e3
+		summarizeBy: sum
+		sourceColumn: longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column nome_fantasia
+		dataType: string
+		sourceProviderType: nvarchar(150)
+		lineageTag: 7daa19a2-5422-41d0-b7a5-51296b009d3b
+		summarizeBy: none
+		sourceColumn: nome_fantasia
+
+		annotation SummarizationSetBy = Automatic
+
+	column razao_social
+		dataType: string
+		sourceProviderType: nvarchar(150)
+		lineageTag: fee9ca95-b8ef-40ee-a4d0-af1dd20a7876
+		summarizeBy: none
+		sourceColumn: razao_social
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUTO
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: e386f344-5640-4e51-8b02-f1ce95271c3e
+		summarizeBy: none
+		sourceColumn: PRODUTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column microrregiao
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		lineageTag: 555e21a0-d67e-4a44-9406-d37338327aac
+		summarizeBy: none
+		sourceColumn: microrregiao
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateRelacionamento
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 0e93eb96-0330-4c9b-8a51-41de184341d8
+		summarizeBy: none
+		sourceColumn: DateRelacionamento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column rank_cidade
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0dd2611d-055c-4bb5-9c70-b75f60b7e2ee
+		summarizeBy: sum
+		sourceColumn: rank_cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column rank_microrregiao
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5f0f0e68-db93-45d5-a2a9-ed59c5d570a1
+		summarizeBy: sum
+		sourceColumn: rank_microrregiao
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_desconto
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 3baf914d-48e0-47b9-a24f-a61bb9654d0c
+		summarizeBy: sum
+		sourceColumn: valor_desconto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column valor_tabela
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 4f6ad66a-4f66-4fa1-81f2-687065644337
+		summarizeBy: sum
+		sourceColumn: valor_tabela
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column considerado
+		dataType: string
+		sourceProviderType: nchar
+		lineageTag: 7ebb4b14-29af-4f92-bc81-27b793419ac2
+		summarizeBy: none
+		sourceColumn: considerado
+
+		annotation SummarizationSetBy = Automatic
+
+	column sk_nota
+		dataType: double
+		sourceProviderType: double
+		lineageTag: 48e53c69-b948-4521-9da0-ee497500523b
+		summarizeBy: sum
+		sourceColumn: sk_nota
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fat_notas = m
+		mode: directQuery
+		source =
+				let
+				    Fonte = MariaDB.Contents("10.48.12.20:3306;dbDrogamais", null, null),
+				    silver_menorPreco_produtos_Table = Fonte{[Name="silver_menorPreco_notas",Kind="Table"]}[Data],
+				    #"Linhas Filtradas" = Table.SelectRows(silver_menorPreco_produtos_Table, each true)
+				in
+				    #"Linhas Filtradas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

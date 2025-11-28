@@ -721,22 +721,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.média_de_desconto": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Média de desconto"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "média de desconto": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "medida.qtd__cidades": {
 			      "Definition": {
 			        "Binding": {
@@ -4736,19 +4720,10 @@ cultureInfo pt-BR
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "bronze_menorpreco_produtos.produto": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "bronze_menorPreco_produtos",
-			          "ConceptualProperty": "PRODUTO"
-			        }
-			      },
-			      "State": "Generated"
-			    },
 			    "silver_menorpreco_notas.nome_fantasia": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "silver_menorPreco_notas",
+			          "ConceptualEntity": "fat_notas",
 			          "ConceptualProperty": "nome_fantasia"
 			        }
 			      },
@@ -4769,7 +4744,7 @@ cultureInfo pt-BR
 			    "silver_menorpreco_notas.razao_social": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "silver_menorPreco_notas",
+			          "ConceptualEntity": "fat_notas",
 			          "ConceptualProperty": "razao_social"
 			        }
 			      },
@@ -4790,7 +4765,7 @@ cultureInfo pt-BR
 			    "silver_menorpreco_notas.bandeira": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "silver_menorPreco_notas",
+			          "ConceptualEntity": "fat_notas",
 			          "ConceptualProperty": "bandeira"
 			        }
 			      },
@@ -4811,7 +4786,7 @@ cultureInfo pt-BR
 			    "silver_menorpreco_notas.cidade": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "silver_menorPreco_notas",
+			          "ConceptualEntity": "fat_notas",
 			          "ConceptualProperty": "cidade"
 			        }
 			      },
@@ -4832,7 +4807,7 @@ cultureInfo pt-BR
 			    "silver_menorpreco_notas.microrregiao": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "silver_menorPreco_notas",
+			          "ConceptualEntity": "fat_notas",
 			          "ConceptualProperty": "microrregiao"
 			        }
 			      },
@@ -4847,13 +4822,23 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "MICRORREGIÃO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
 			    "silver_menorpreco_notas.valor": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "silver_menorPreco_notas",
+			          "ConceptualEntity": "fat_notas",
 			          "ConceptualProperty": "valor"
 			        }
 			      },
@@ -4861,6 +4846,69 @@ cultureInfo pt-BR
 			      "Terms": [
 			        {
 			          "Valor": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "view_menorpreco_lojas_email.nome_fantasia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "view_menorPreco_lojas_email",
+			          "ConceptualProperty": "nome_fantasia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LOJA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medidas.media_mercado_tabela": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Media Mercado PMC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Media Mercado PMC": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_produtos.produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_produtos",
+			          "ConceptualProperty": "PRODUTO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Produto": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

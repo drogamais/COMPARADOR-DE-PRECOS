@@ -1,0 +1,115 @@
+table dim_lojas_menorPreco
+	lineageTag: 28ae1a4e-65a6-4432-9021-46b76af901f3
+
+	column id_loja
+		dataType: string
+		lineageTag: 17269779-aa7a-4799-a571-f5a3f3eafa3e
+		summarizeBy: none
+		sourceColumn: id_loja
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_fantasia
+		dataType: string
+		lineageTag: c1b7bb2b-391b-46dd-9f31-efbfc6770dac
+		summarizeBy: none
+		sourceColumn: nome_fantasia
+
+		annotation SummarizationSetBy = Automatic
+
+	column razao_social
+		dataType: string
+		lineageTag: 68ab49ca-8838-4987-a6b3-9bca78176995
+		summarizeBy: none
+		sourceColumn: razao_social
+
+		annotation SummarizationSetBy = Automatic
+
+	column logradouro
+		dataType: string
+		lineageTag: a1506a96-7269-4e61-a28b-fffa1b463959
+		summarizeBy: none
+		sourceColumn: logradouro
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitude
+		dataType: double
+		lineageTag: 1faafe11-3261-4909-81fd-0db73d20b1a9
+		summarizeBy: sum
+		sourceColumn: latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column longitude
+		dataType: double
+		lineageTag: bf3aec03-8cb8-4c26-ab4b-3ea4df341a8a
+		summarizeBy: sum
+		sourceColumn: longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cidade
+		dataType: string
+		lineageTag: 619d80da-e46a-46c8-b8ae-70afd21c587b
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column geohash
+		dataType: string
+		lineageTag: 6990a1f3-e291-4f45-a1f5-95626d4e2203
+		summarizeBy: none
+		sourceColumn: geohash
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_atualizacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b140a5b4-46d0-4fd0-9b5b-3974d73a287a
+		summarizeBy: none
+		sourceColumn: data_atualizacao
+
+		variation Variation
+			isDefault
+			relationship: c8a41b6e-c40f-44f4-858b-92b99d92b77e
+			defaultHierarchy: LocalDateTable_f8bfc86f-fa9b-4214-8cbd-8773e4110324.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column bandeira
+		dataType: string
+		lineageTag: a3736cdc-8c0e-4448-863b-4dc00fd2d91f
+		summarizeBy: none
+		sourceColumn: bandeira
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 5bd193cc-cc75-42dd-a5b1-d9da73fa3843
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_lojas_menorPreco = m
+		mode: import
+		source =
+				let
+				    Fonte = MariaDB.Contents("10.48.12.20:3306;dbDrogamais", null, null),
+				    bronze_menorPreco_lojas_Table = Fonte{[Name="bronze_menorPreco_lojas",Kind="Table"]}[Data],
+				    #"Linhas Filtradas" = Table.SelectRows(bronze_menorPreco_lojas_Table, each ([email] <> null))
+				in
+				    #"Linhas Filtradas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
