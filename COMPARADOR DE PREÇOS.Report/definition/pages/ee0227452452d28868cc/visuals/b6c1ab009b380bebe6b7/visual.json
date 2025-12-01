@@ -140,5 +140,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "43a1242113003a523d1c"
+  "parentGroupName": "43a1242113003a523d1c",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bfaabef935492601a78d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Menor Valor TXT S/OB"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

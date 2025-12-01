@@ -22,11 +22,11 @@ ref table fat_notas
 ref table LocalDateTable_a867240f-3b04-4e86-b00c-9db76755d7e7
 ref table LocalDateTable_19ac7ba3-0c5b-4049-986a-6ab1c60cb286
 ref table dim_produtos
-ref table LocalDateTable_089ab086-3113-4901-b5b1-02f3ce53febf
 ref table dim_lojas_menorPreco
 ref table LocalDateTable_f8bfc86f-fa9b-4214-8cbd-8773e4110324
 ref table view_menorPreco_lojas_email
 ref table view_menorPreco_valor_email
+ref table LocalDateTable_f59cf426-d36a-4e38-8135-a6faa6297e97
 
 ref role ADM
 ref role USUARIOS

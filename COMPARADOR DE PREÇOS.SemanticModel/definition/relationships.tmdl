@@ -17,11 +17,6 @@ relationship 47fd04b6-5ba7-13d2-8cb9-6d447d8bab32
 	fromColumn: fat_notas.DateRelacionamento
 	toColumn: dCalendario.Date
 
-relationship ffa807c3-0f23-4f66-851c-b70fe8ea8cb7
-	joinOnDateBehavior: datePartOnly
-	fromColumn: dim_produtos.data_atualizacao
-	toColumn: LocalDateTable_089ab086-3113-4901-b5b1-02f3ce53febf.Date
-
 relationship a9093fc0-fbf8-603c-00ac-7676c50c81f1
 	fromColumn: fat_notas.gtin
 	toColumn: dim_produtos.gtin
@@ -42,4 +37,9 @@ relationship AutoDetected_feae7af8-a14b-48e8-8009-2a1e8d6e10a2
 relationship 54121d23-fbd6-826c-0d9c-7a9b4869c2bb
 	fromColumn: view_menorPreco_valor_email.gtin
 	toColumn: dim_produtos.gtin
+
+relationship fe1370ed-e8ed-443b-8fde-66fd089f2897
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_produtos.data_insercao
+	toColumn: LocalDateTable_f59cf426-d36a-4e38-8135-a6faa6297e97.Date
 

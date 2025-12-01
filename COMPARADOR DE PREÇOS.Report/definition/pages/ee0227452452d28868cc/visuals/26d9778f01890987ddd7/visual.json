@@ -109,5 +109,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "318ff90e0c910e7e24a5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Outras Bandeiras (Última Compra)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

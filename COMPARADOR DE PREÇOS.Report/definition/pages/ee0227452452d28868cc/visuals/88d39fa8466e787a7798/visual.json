@@ -150,5 +150,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "2b22fcb9bb396881dd82"
+  "parentGroupName": "2b22fcb9bb396881dd82",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8bcb6a50c499d34e3556",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Outras Bandeiras - Menor Preço"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

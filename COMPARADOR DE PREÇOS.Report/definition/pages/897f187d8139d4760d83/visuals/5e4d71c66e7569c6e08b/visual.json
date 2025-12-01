@@ -206,6 +206,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "cidade2",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {

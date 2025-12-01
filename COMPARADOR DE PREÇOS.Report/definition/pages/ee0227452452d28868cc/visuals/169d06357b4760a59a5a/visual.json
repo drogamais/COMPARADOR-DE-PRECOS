@@ -453,6 +453,62 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "870aae7c02706173dac6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fat_notas"
+              }
+            },
+            "Property": "DateRelacionamento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "63c230e4a94ee1621662",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Moda S/OB"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6453422308a71e3bb510",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Mediana S/OB"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fdff886902caa513ecbb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Menor Valor S/OB"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -323,5 +323,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "30e45e71324c5d335e33",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fat_notas"
+              }
+            },
+            "Property": "DateRelacionamento"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

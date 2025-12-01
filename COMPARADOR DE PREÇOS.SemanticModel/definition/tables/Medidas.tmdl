@@ -148,16 +148,14 @@ table Medidas
 	measure 'Top 1 (Última Compra)' = ```
 			
 			VAR nBANDEIRA = [Top 1 - Bandeira] 
-			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO]) 
-			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao]) 
 			
 			RETURN 
 			    COALESCE( 
-			            CALCULATE( 
-			                MAX(fat_notas[date]), 
-			                FILTER( fat_notas, fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA) 
-			                ), "-" 
-			            )
+			        CALCULATE( 
+			            MAX(fat_notas[date]), 
+			            fat_notas[Bandeira] = nBANDEIRA
+			            ), "-" 
+			        )
 			```
 		formatString: General date
 		displayFolder: Última Compra
@@ -169,16 +167,12 @@ table Medidas
 			
 			
 			VAR nBANDEIRA = [Top 2 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao])
 			
 			RETURN
 			    COALESCE(
 			        CALCULATE(
-			            MAX(fat_notas[date]), 
-			            FILTER(
-			                fat_notas, 
-			                fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA)
+			            MAX(fat_notas[date]),
+			                fat_notas[Bandeira] = nBANDEIRA
 			        ), 
 			        "-"
 			    )
@@ -193,16 +187,12 @@ table Medidas
 			
 			
 			VAR nBANDEIRA = [Top 3 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao])
 			
 			RETURN
 			    COALESCE(
 			        CALCULATE(
 			            MAX(fat_notas[date]), 
-			            FILTER(
-			                fat_notas, 
-			                fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA)
+			                fat_notas[Bandeira] = nBANDEIRA
 			        ), 
 			        "-"
 			    )
@@ -217,16 +207,12 @@ table Medidas
 			
 			
 			VAR nBANDEIRA = [Top 4 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao])
 			
 			RETURN
 			    COALESCE(
 			        CALCULATE(
-			            MAX(fat_notas[date]), 
-			            FILTER(
-			                fat_notas, 
-			                fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA)
+			            MAX(fat_notas[date]),
+			                fat_notas[Bandeira] = nBANDEIRA
 			        ), 
 			        "-"
 			    )
@@ -241,16 +227,12 @@ table Medidas
 			
 			
 			VAR nBANDEIRA = [Top 5 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao])
 			
 			RETURN
 			    COALESCE(
 			        CALCULATE(
 			            MAX(fat_notas[date]), 
-			            FILTER(
-			                fat_notas, 
-			                fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA)
+			            fat_notas[Bandeira] = nBANDEIRA
 			        ), 
 			        "-"
 			    )
@@ -265,16 +247,12 @@ table Medidas
 			
 			
 			VAR nBANDEIRA = [Top 6 - Bandeira]
-			VAR PRODUTO = SELECTEDVALUE(fat_notas[PRODUTO])
-			VAR MICRO = SELECTEDVALUE(fat_notas[Microrregiao])
 			
 			RETURN
 			    COALESCE(
 			        CALCULATE(
-			            MAX(fat_notas[date]), 
-			            FILTER(
-			                fat_notas, 
-			                fat_notas[PRODUTO] = PRODUTO && fat_notas[Bandeira] = nBANDEIRA)
+			            MAX(fat_notas[date]),
+			            fat_notas[Bandeira] = nBANDEIRA
 			        ), 
 			        "-"
 			    )
@@ -499,10 +477,11 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Qtd Notas - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", COUNT(silver_menorPreco_notas[descricao]))
-		formatString: 0
+	measure 'Qtd Notas - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", COUNT(dim_produtos[descricao]))
 		displayFolder: Razão Social
 		lineageTag: 195c36ee-c082-4cd0-b934-702944cc4c9e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Média Desconto - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", AVERAGE(fat_notas[valor_desconto]))
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
@@ -518,14 +497,14 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'PMC - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", SELECTEDVALUE(fat_Dados[valor_tabela]))
+	measure 'PMC - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", SELECTEDVALUE(fat_notas[valor_tabela]))
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: Razão Social
 		lineageTag: b4682046-d7f2-4bcb-b0d7-87e60bf2bf85
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure 'Últ. Nota - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", FORMAT(MAX(fat_Dados[datahora]), "dd/mm/yyyy hh:mm"))
+	measure 'Últ. Nota - Razão Social' = IF([Texto - Razão Social] = "NÃO SELECIONADA", "-", FORMAT(MAX(fat_notas[date]), "dd/mm/yyyy hh:mm"))
 		formatString: General Date
 		displayFolder: Razão Social
 		lineageTag: 1b215a04-edca-4c84-a275-79682cd6cf8d
@@ -811,7 +790,7 @@ table Medidas
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Período do Produto' = ```
-			"De "& DATEVALUE(SELECTEDVALUE(dim_produtos[data_atualizacao])) &" á "& DATEVALUE(SELECTEDVALUE(dim_produtos[data_atualizacao]))+30 
+			"De "& DATEVALUE(SELECTEDVALUE(dim_produtos[data_insercao])) &" á "& DATEVALUE(SELECTEDVALUE(dim_produtos[data_insercao]))+30 
 			```
 		lineageTag: 6eac3d40-2c03-4f19-b6ae-b25d4aa6127f
 

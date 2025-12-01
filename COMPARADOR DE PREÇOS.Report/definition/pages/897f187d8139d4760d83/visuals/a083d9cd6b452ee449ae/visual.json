@@ -247,6 +247,29 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "Microrregião",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "75794caed4b4a49070a3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fat_notas"
+              }
+            },
+            "Property": "microrregiao"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fat_notas"
+                      "Entity": "dim_produtos"
                     }
                   },
                   "Property": "PRODUTO"
                 }
               },
-              "queryRef": "fat_notas.PRODUTO",
+              "queryRef": "dim_produtos.PRODUTO",
               "nativeQueryRef": "PRODUTO1",
               "active": true
             }
@@ -58,42 +58,39 @@
                 }
               }
             },
-            "filter": {
+            "selfFilter": {
               "filter": {
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "f",
-                    "Entity": "fat_notas",
+                    "Name": "d",
+                    "Entity": "dim_produtos",
                     "Type": 0
                   }
                 ],
                 "Where": [
                   {
                     "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "f"
-                                }
-                              },
-                              "Property": "PRODUTO"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'00000075076825 - DES REXONA CLINICAL NOVO MEN C - ABOVE COSMETICOS'"
+                      "Contains": {
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
                               }
-                            }
-                          ]
-                        ]
+                            },
+                            "Property": "PRODUTO"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'vick'"
+                          }
+                        }
                       }
+                    },
+                    "Annotations": {
+                      "PowerBI.MParameterBehavior": 1
                     }
                   }
                 ]
@@ -115,7 +112,7 @@
             "strictSingleSelect": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -256,7 +253,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ab3782f79e0099cd1e5d",
+        "name": "a040889d82a7a193939a",
         "field": {
           "Column": {
             "Expression": {
@@ -272,7 +269,7 @@
           "Version": 2,
           "From": [
             {
-              "Name": "b",
+              "Name": "d",
               "Entity": "dim_produtos",
               "Type": 0
             }
@@ -288,7 +285,7 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "b"
+                                "Source": "d"
                               }
                             },
                             "Property": "PRODUTO"
@@ -311,7 +308,6 @@
             }
           ]
         },
-        "howCreated": "User",
         "objects": {
           "general": [
             {

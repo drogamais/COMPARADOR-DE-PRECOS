@@ -109,5 +109,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f398f3b4c4b5438b965a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Top 5 (Última Compra)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

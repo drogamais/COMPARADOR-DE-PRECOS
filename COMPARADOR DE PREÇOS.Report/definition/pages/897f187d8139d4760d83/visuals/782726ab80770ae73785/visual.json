@@ -212,6 +212,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "PRODUTO",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
